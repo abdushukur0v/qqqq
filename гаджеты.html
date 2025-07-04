@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Гаджеты</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: red;
+      margin: 0;
+      padding: 0;
+    }
+    header {
+      background: red;
+      color: #fff;
+      padding: 20px;
+      text-align: center;
+    }
+    .container {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(420px, 1fr));
+      gap: 20px;
+      padding: 20px;
+    }
+    .card {
+      background: #fff;
+      padding: 15px;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      transition: transform 0.2s;
+    }
+    .card:hover {
+      transform: scale(1.03);
+    }
+    .card img {
+      width: 100%;
+      border-radius: 8px;
+    }
+    .card h3 {
+      margin-top: 10px;
+    }
+    .card p {
+      color: #555;
+    }
+    .price {
+      font-size: 18px;
+      font-weight: bold;
+      color: #2a9d8f;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Интернет-магазин гаджетов</h1>
+  </header>
+
+  <main class="container">
+    <div class="card">
+      <img src="а12.jpeg" alt="Смартфон">
+      <h3>Смартфон A12</h3>
+      <p>Хороший бюджетный смартфон с 64ГБ памяти и двойной камерой.</p>
+      <p class="price">10 500 сом</p>
+    </div>
+    <div class="card">
+      <img src="Наушники.jpeg" alt="Наушники">
+      <h3>Беспроводные наушники XSound</h3>
+      <p>До 20 часов автономной работы, шумоподавление.</p>
+      <p class="price">3 200 сом</p>
+    </div>
+    <div class="card">
+      <img src="часы.jpeg" alt="Смарт-часы">
+      <h3>Смарт-часы FitPro</h3>
+      <p>Мониторинг сна, шагомер и уведомления с телефона.</p>
+      <p class="price">5 800 сом</p>
+    </div>
+    <div class="card">
+      <img src="Планшет.jpeg" alt="Планшет">
+      <h3>Планшет Tab M10</h3>
+      <p>10-дюймовый экран, 4ГБ ОЗУ, 64ГБ ПЗУ.</p>
+      <p class="price">14 900 сом</p>
+    </div>
+  </main>
+</body>
+</html>

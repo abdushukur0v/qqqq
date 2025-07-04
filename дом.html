@@ -1,0 +1,797 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Товары для дома</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      margin: 0;
+      padding: 20px;
+      background-color: red;
+    }
+
+    h1 {
+      text-align: center;
+      color: white;
+      margin-bottom: 25px;
+    }
+
+    .tabs {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 10px;
+      margin-bottom: 25px;
+    }
+
+    .tabs button {
+      padding: 10px 15px;
+      border: none;
+      background-color: white;
+      color: black;
+      border-radius: 20px;
+      font-weight: bold;
+      cursor: pointer;
+      transition: background 0.3s;
+    }
+
+    .tabs button.active {
+      background-color: black;
+      color: white;
+    }
+
+    .section {
+      display: none;
+    }
+
+    .section.active {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(420px, 0fr));
+      gap: 30px;
+    }
+
+    .card {
+       background: white;
+      border-radius: 14px;
+      padding: 15px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+      transition: transform 0.2s;
+	  width: 250px;
+    }
+
+    .card img {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+      border-radius: 10px;
+    }
+
+    .card h3 {
+      font-size: 16px;
+      margin: 10px 0 5px;
+      color: black;
+    }
+
+    .price {
+      color: black;
+      font-weight: bold;
+    }
+  </style>
+</head>
+<body>
+
+  <h1> Товары для дома</h1>
+
+  <div class="tabs">
+    <button class="tab-btn active" data-tab="furniture">Мебель</button>
+    <button class="tab-btn" data-tab="garden">Дом и сад</button>
+    <button class="tab-btn" data-tab="repair">Ремонт</button>
+    <button class="tab-btn" data-tab="carpets">Ковры</button>
+    <button class="tab-btn" data-tab="decor">Декор</button>
+    <button class="tab-btn" data-tab="textile">Текстиль</button>
+    <button class="tab-btn" data-tab="lighting">Освещение</button>
+    <button class="tab-btn" data-tab="kitchen">Кухня</button>
+    <button class="tab-btn" data-tab="cleaning">Хозтовары</button>
+    <button class="tab-btn" data-tab="stationery">Канцтовары</button>
+    <button class="tab-btn" data-tab="other">Другое</button>
+  </div>
+
+  <div class="section active" id="furniture">
+    <div class="card">
+      <img src="Диван угловой.jpg" alt="Диван">
+      <h3>Угловой диван</h3>
+      <p class="price">28 990сом</p>
+    </div>
+    <div class="card">
+      <img src="Стол.jpg" alt="Стол">
+      <h3>Обеденный стол</h3>
+      <p class="price">8 750сом</p>
+    </div>
+	<div class="card">
+      <img src="тумбочка.jpeg" alt="Стол">
+      <h3>Тумбочка</h3>
+      <p class="price">10 750сом</p>
+    </div>
+	<div class="card">
+      <img src="мебель.jpg" alt="Стол">
+      <h3>Тумбочка</h3>
+      <p class="price">8 750сом</p>
+    </div>
+	<div class="card">
+      <img src="мебель1.jpg" alt="мебель">
+      <h3>Книжная тумбочка</h3>
+      <p class="price">15 000сом</p>
+    </div>
+	<div class="card">
+      <img src="мебель2.jpg" alt="мебель">
+      <h3>Полка для книг</h3>
+      <p class="price">30 000сом</p>
+    </div>
+	<div class="card">
+      <img src="мебель3.jpg" alt="мебель">
+      <h3>Стол обеденный</h3>
+      <p class="price">18 000сом</p>
+    </div>
+	<div class="card">
+      <img src="мебель4.jpg" alt="мебель">
+      <h3>Шкаф </h3>
+      <p class="price">33 000сом</p>
+    </div>
+	<div class="card">
+      <img src="мебель5.jpg" alt="мебель">
+      <h3>Полка</h3>
+      <p class="price">10 000сом</p>
+    </div>
+	<div class="card">
+      <img src="мебель6.jpg" alt="мебель">
+      <h3>Стол офисный</h3>
+      <p class="price">43 000сом</p>
+    </div>
+	<div class="card">
+      <img src="мебель7.jpg" alt="мебель">
+      <h3>Стул</h3>
+      <p class="price">6 000сом</p>
+    </div>
+	<div class="card">
+      <img src="мебель8.jpg" alt="мебель">
+      <h3>Полка дизайнерская</h3>
+      <p class="price">20 000сом</p>
+    </div>
+  </div>
+
+  <div class="section" id="garden">
+    <div class="card">
+      <img src="Грабли.jpg" alt="Грабли">
+      <h3>Грабли садовые</h3>
+      <p class="price">520сом</p>
+    </div>
+	<div class="card">
+      <img src="шланга.jpeg" alt="Грабли">
+      <h3>Шланга</h3>
+      <p class="price">220сом</p>
+    </div>
+	<div class="card">
+      <img src="мясорубка.jpeg" alt="Грабли">
+      <h3>Мясорубка</h3>
+      <p class="price">3 520сом</p>
+    </div>
+	 <div class="card">
+      <img src="пила.jpg" alt="">
+      <h3>Пила</h3>
+      <p class="price">50сом</p>
+    </div>
+	 <div class="card">
+      <img src="мотопила.jpg" alt="">
+      <h3>Мотопила</h3>
+      <p class="price">3 000сом</p>
+    </div>
+	 <div class="card">
+      <img src="лопата.jpg" alt="">
+      <h3>Лопатка</h3>
+      <p class="price">320сом</p>
+    </div>
+	 <div class="card">
+      <img src="лопатка.jpg" alt="">
+      <h3>Лопатка</h3>
+      <p class="price">400сом</p>
+    </div>
+	 <div class="card">
+      <img src="топор.jpg" alt="">
+      <h3>Топор</h3>
+      <p class="price">350сом</p>
+    </div>
+	 <div class="card">
+      <img src="лопата1.jpg" alt="">
+      <h3>Лопата</h3>
+      <p class="price">200сом</p>
+    </div>
+	 <div class="card">
+      <img src="набор для дома.jpg" alt="">
+      <h3>Набор для сада</h3>
+      <p class="price">4 500сом</p>
+    </div>
+	 <div class="card">
+      <img src="набор для сада.jpg" alt="">
+      <h3>Набор для сада</h3>
+      <p class="price">3 000сом</p>
+    </div>
+	 <div class="card">
+      <img src="тележка.jpg" alt="">
+      <h3>Тележка</h3>
+      <p class="price">4 000сом</p>
+    </div>
+  </div>
+
+  <div class="section" id="repair">
+    <div class="card">
+      <img src="Дрель.jpg" alt="Дрель">
+      <h3>Дрель Bosch</h3>
+      <p class="price">3 490сом</p>
+    </div>
+	<div class="card">
+      <img src="Перфоратор.jpeg" alt="Дрель">
+      <h3>Перфоратор</h3>
+      <p class="price">5 490сом</p>
+    </div>
+	<div class="card">
+      <img src="набор ключей.jpeg" alt="Дрель">
+      <h3>Набор ключей</h3>
+      <p class="price">1 490сом</p>
+    </div>
+	<div class="card">
+      <img src="набор инструментов1.jpg" alt="">
+      <h3>Набор ключей</h3>
+      <p class="price">1 690сом</p>
+    </div>
+	<div class="card">
+      <img src="набор инструментов.jpg" alt="">
+      <h3>Набор инструментов</h3>
+      <p class="price">2 900сом</p>
+    </div>
+	<div class="card">
+      <img src="метр.jpg" alt="">
+      <h3>2 в 1</h3>
+      <p class="price">250сом</p>
+    </div>
+	<div class="card">
+      <img src="лазер.jpg" alt="">
+      <h3>Лазер</h3>
+      <p class="price">600сом</p>
+    </div>
+	<div class="card">
+      <img src="уровень.jpg" alt="">
+      <h3>Уровень</h3>
+      <p class="price">200сом</p>
+    </div>
+	<div class="card">
+      <img src="набор атверток.jpg" alt="">
+      <h3>Набор атверток</h3>
+      <p class="price">1 600сом</p>
+    </div>
+	<div class="card">
+      <img src="сварочный аппарат.jpg" alt="">
+      <h3>Сварочный аппарат</h3>
+      <p class="price">4 000сом</p>
+    </div>
+	<div class="card">
+      <img src="компрессор.jpg" alt="">
+      <h3>Компрессор</h3>
+      <p class="price">8 000сом</p>
+    </div>
+	<div class="card">
+      <img src="стремянка.jpg" alt="">
+      <h3>Стремянка</h3>
+      <p class="price">3 800сом</p>
+    </div>
+  </div>
+
+  <div class="section" id="carpets">
+    <div class="card">
+      <img src="Ковер.jpg" alt="Ковер">
+      <h3>Ковер 200x300 см</h3>
+      <p class="price">5 990сом</p>
+    </div>
+	<div class="card">
+      <img src="Коврик утка.jpeg" alt="Ковер">
+      <h3>Ковер </h3>
+      <p class="price">3 990сом</p>
+    </div>
+	<div class="card">
+      <img src="Коврик уно.jpeg" alt="Ковер">
+      <h3>Ковер</h3>
+      <p class="price">2 990сом</p>
+    </div>
+	<div class="card">
+      <img src="ковер1.jpg" alt="Ковер">
+      <h3>Ковер</h3>
+      <p class="price">3 000сом</p>
+    </div>
+	<div class="card">
+      <img src="ковер2.jpg" alt="Ковер">
+      <h3>Ковер</h3>
+      <p class="price">3 600сом</p>
+    </div>
+	<div class="card">
+      <img src="ковер3.jpg" alt="Ковер">
+      <h3>Ковер</h3>
+      <p class="price">5 000сом</p>
+    </div>
+	<div class="card">
+      <img src="ковер4.jpg" alt="Ковер">
+      <h3>Ковер</h3>
+      <p class="price">2 999сом</p>
+    </div>
+	<div class="card">
+      <img src="ковер5.jpg" alt="Ковер">
+      <h3>Ковер</h3>
+      <p class="price">3 999сом</p>
+    </div>
+	<div class="card">
+      <img src="ковер6.jpg" alt="Ковер">
+      <h3>Ковер</h3>
+      <p class="price">3 200сом</p>
+    </div>
+	<div class="card">
+      <img src="ковер7.jpg" alt="Ковер">
+      <h3>Ковер</h3>
+      <p class="price">7 000сом</p>
+    </div>
+	<div class="card">
+      <img src="ковер8.jpg" alt="Ковер">
+      <h3>Ковер</h3>
+      <p class="price">6 500сом</p>
+    </div>
+	<div class="card">
+      <img src="ковер9.jpg" alt="Ковер">
+      <h3>Ковер</h3>
+      <p class="price">5 500сом</p>
+    </div>
+  </div>
+
+  <div class="section" id="decor">
+    <div class="card">
+      <img src="Картина стенная.jpg" alt="Картина">
+      <h3>Настенная картина</h3>
+      <p class="price">1 290сом</p>
+    </div>
+	 <div class="card">
+      <img src="картина.jpg" alt="Картина">
+      <h3>Настенная картина</h3>
+      <p class="price">1 990сом</p>
+    </div>
+	 <div class="card">
+      <img src="картина1.jpg" alt="Картина">
+      <h3>Настенная картина</h3>
+      <p class="price">2 290сом</p>
+    </div>
+	 <div class="card">
+      <img src="картина2.jpg" alt="Картина">
+      <h3>Настенная картина</h3>
+      <p class="price">2 200сом</p>
+    </div>
+	 <div class="card">
+      <img src="ваза.jpg" alt="Картина">
+      <h3>Ваза</h3>
+      <p class="price">590сом</p>
+    </div>
+	<div class="card">
+      <img src="ваза1.jpg" alt="Картина">
+      <h3>Ваза</h3>
+      <p class="price">5 990сом</p>
+    </div>
+	<div class="card">
+      <img src="ваза2.jpeg" alt="Картина">
+      <h3>Ваза</h3>
+      <p class="price">2 590сом</p>
+    </div>
+	<div class="card">
+      <img src="ваза3.jpg" alt="Картина">
+      <h3>Ваза</h3>
+      <p class="price">1 590сом</p>
+    </div>
+	 <div class="card">
+      <img src="светильник2.jpeg" alt="Картина">
+      <h3>Светильник</h3>
+      <p class="price">1 000сом</p>
+    </div>
+	 <div class="card">
+      <img src="светильник4.jpg" alt="Картина">
+      <h3>Светильник</h3>
+      <p class="price">1 990сом</p>
+    </div>
+	 <div class="card">
+      <img src="светильник5.jpg" alt="Картина">
+      <h3>Светильник</h3>
+      <p class="price">500сом</p>
+    </div>
+	 <div class="card">
+      <img src="светильник6.jpg" alt="Картина">
+      <h3>Светильник</h3>
+      <p class="price">200сом</p>
+    </div>	
+  </div>
+
+  <div class="section" id="textile">
+    <div class="card">
+      <img src="Плед.jpg" alt="Плед">
+      <h3>Мягкий плед</h3>
+      <p class="price">890сом</p>
+    </div>
+	 
+	 <div class="card">
+      <img src="Плед1.jpg" alt="Плед">
+      <h3>Мягкий плед</h3>
+      <p class="price">390сом</p>
+    </div>
+	 <div class="card">
+      <img src="Плед2.jpg" alt="Плед">
+      <h3>Мягкий плед</h3>
+      <p class="price">800сом</p>
+    </div>
+	 <div class="card">
+      <img src="Плед3.jpg" alt="Плед">
+      <h3>Мягкий плед</h3>
+      <p class="price">590сом</p>
+    </div>
+	<div class="card">
+      <img src="Полотенце.jpeg" alt="Плед">
+      <h3>Полотенце</h3>
+      <p class="price">290сом</p>
+    </div>
+	<div class="card">
+      <img src="Полотенце.jpg" alt="Плед">
+      <h3>Полотенце</h3>
+      <p class="price">390сом</p>
+    </div>
+	<div class="card">
+      <img src="Полотенце1.jpg" alt="Плед">
+      <h3>Полотенце</h3>
+      <p class="price">290сом</p>
+    </div>
+	<div class="card">
+      <img src="Полотенце2.jpg" alt="Плед">
+      <h3>Полотенце</h3>
+      <p class="price">490сом</p>
+    </div>
+	<div class="card">
+      <img src="Подушка.jpeg" alt="Плед">
+      <h3>Подушки</h3>
+      <p class="price">1 890сом</p>
+    </div>
+	<div class="card">
+      <img src="Подушка.jpg" alt="Плед">
+      <h3>Подушки</h3>
+      <p class="price">2 890сом</p>
+    </div>
+	<div class="card">
+      <img src="Подушка1.jpg" alt="Плед">
+      <h3>Подушка</h3>
+      <p class="price">1 990сом</p>
+    </div>
+	<div class="card">
+      <img src="Подушка2.jpg" alt="Плед">
+      <h3>Подушки</h3>
+      <p class="price">1 500сом</p>
+    </div>
+  </div>
+
+  <div class="section" id="lighting">
+    <div class="card">
+      <img src="Люстра.jpg" alt="Люстра">
+      <h3>Люстра потолочная</h3>
+      <p class="price">4 500сом</p>
+    </div>
+	 <div class="card">
+      <img src="Люстра1.jpg" alt="Люстра">
+      <h3>Люстра потолочная</h3>
+      <p class="price">3 500сом</p>
+    </div>
+	 <div class="card">
+      <img src="Люстра2.jpg" alt="Люстра">
+      <h3>Люстра потолочная</h3>
+      <p class="price">8 500сом</p>
+    </div>
+	 <div class="card">
+      <img src="Люстра3.jpg" alt="Люстра">
+      <h3>Люстра потолочная</h3>
+      <p class="price">5 500сом</p>
+    </div>
+	 <div class="card">
+      <img src="Люстра4.jpg" alt="Люстра">
+      <h3>Люстра потолочная</h3>
+      <p class="price">7 500сом</p>
+    </div>
+	 <div class="card">
+      <img src="плафон.jpg" alt="Люстра">
+      <h3>Плафон</h3>
+      <p class="price">1 800сом</p>
+    </div>
+	<div class="card">
+      <img src="светильник3.jpeg" alt="Люстра">
+      <h3>Светильник</h3>
+      <p class="price">1 500сом</p>
+    </div>
+	<div class="card">
+      <img src="Люстра2.jpeg" alt="Люстра">
+      <h3>Люстра потолочная</h3>
+      <p class="price">7 000сом</p>
+    </div>
+	<div class="card">
+      <img src="бра.jpg" alt="Люстра">
+      <h3>Бра</h3>
+      <p class="price">999сом</p>
+    </div>
+	<div class="card">
+      <img src="бра1.jpg" alt="Люстра">
+      <h3>Бра</h3>
+      <p class="price">600сом</p>
+    </div>
+	<div class="card">
+      <img src="бра2.jpg" alt="Люстра">
+      <h3>Бра</h3>
+      <p class="price">900сом</p>
+    </div>
+	<div class="card">
+      <img src="бра3.jpg" alt="Люстра">
+      <h3>Бра</h3>
+      <p class="price">1 500сом</p>
+    </div>
+  </div>
+
+  <div class="section" id="kitchen">
+    <div class="card">
+      <img src="Кастрюли.jpg" alt="Кастрюля">
+      <h3>Набор кастрюль</h3>
+      <p class="price">2 490сом</p>
+    </div>
+	 <div class="card">
+      <img src="кастрюля.jpg" alt="Кастрюля">
+      <h3>Кастрюля</h3>
+      <p class="price">2 090сом</p>
+    </div>
+	<div class="card">
+      <img src="набор для еды3.jpg" alt="Кастрюля">
+      <h3>Набор кухонных приборов</h3>
+      <p class="price">1 490сом</p>
+    </div>
+	<div class="card">
+      <img src="набор для готовки1.jpg" alt="Кастрюля">
+      <h3>Набор для готовки</h3>
+      <p class="price">2 490сом</p>
+    </div>
+	<div class="card">
+      <img src="набор для готовки2.jpg" alt="Кастрюля">
+      <h3>Набор для готовки</h3>
+      <p class="price">1 590сом</p>
+    </div>
+	<div class="card">
+      <img src="набор для готовки3.jpg" alt="Кастрюля">
+      <h3>Набор для готовки</h3>
+      <p class="price">1 000сом</p>
+    </div>
+	<div class="card">
+      <img src="набор для кухни.jpeg" alt="Кастрюля">
+      <h3>Набор для готовки</h3>
+      <p class="price">2 990сом</p>
+    </div>
+    <div class="card">
+      <img src="набор для еды.jpg" alt="Кастрюля">
+      <h3>Набор кухонных приборов</h3>
+      <p class="price">990сом</p>
+    </div>
+	<div class="card">
+      <img src="набор для еды1.jpg" alt="Кастрюля">
+      <h3>Набор кухонных приборов</h3>
+      <p class="price">500сом</p>
+    </div>
+	<div class="card">
+      <img src="набор для еды2.jpg" alt="Кастрюля">
+      <h3>Набор кухонных приборов</h3>
+      <p class="price">490сом</p>
+    </div>
+	<div class="card">
+      <img src="набор ножей.jpg" alt="Кастрюля">
+      <h3>Набор кухонных ножей</h3>
+      <p class="price">690сом</p>
+    </div>
+	<div class="card">
+      <img src="тарелки.jpg" alt="Кастрюля">
+      <h3>Тарелки</h3>
+      <p class="price">2 090сом</p>
+    </div>
+  </div>
+
+  <div class="section" id="cleaning">
+    <div class="card">
+      <img src="Швабра.jpg" alt="Швабра">
+      <h3>Швабра с ведром</h3>
+      <p class="price">1 150сом</p>
+    </div>
+	
+	<div class="card">
+      <img src="перчатки1.jpeg" alt="Швабра">
+      <h3>Перчатка</h3>
+      <p class="price">50сом</p>
+    </div>
+	<div class="card">
+      <img src="перчатки.jpg" alt="Швабра">
+      <h3>Перчатка</h3>
+      <p class="price">20сом</p>
+    </div>
+	<div class="card">
+      <img src="корзинки.jpg" alt="Швабра">
+      <h3>Корзинки</h3>
+      <p class="price">1 200сом</p>
+    </div>
+	<div class="card">
+      <img src="зонтик.jpg" alt="Швабра">
+      <h3>Зонтик</h3>
+      <p class="price">290сом</p>
+    </div>
+	<div class="card">
+      <img src="щетка.jpg" alt="Швабра">
+      <h3>Щетка</h3>
+      <p class="price">100сом</p>
+    </div>
+	<div class="card">
+      <img src="Зубная щетка.jpg" alt="Швабра">
+      <h3>Зубная щетка</h3>
+      <p class="price">50сом</p>
+    </div>
+	<div class="card">
+      <img src="Зубная паста.jpg" alt="Швабра">
+      <h3>Зубная паста</h3>
+      <p class="price">220сом</p>
+    </div>
+	
+	<div class="card">
+      <img src="Зубная паста2.jpg" alt="Швабра">
+      <h3>Отбеливатель</h3>
+      <p class="price">280сом</p>
+    </div>
+	<div class="card">
+      <img src="Зубная паста1.jpg" alt="Швабра">
+      <h3>Зубная паста</h3>
+      <p class="price">200сом</p>
+    </div>
+	
+
+	<div class="card">
+      <img src="моюшие средства.jpeg" alt="Швабра">
+      <h3>Моюшие средства</h3>
+      <p class="price"> 150сом</p>
+    </div>
+
+	<div class="card">
+      <img src="тряпка.jpeg" alt="Швабра">
+      <h3>Тряпка</h3>
+      <p class="price"> 100сом</p>
+    </div>
+  </div>
+
+  <div class="section" id="stationery">
+    <div class="card">
+      <img src="Ручки.jpg" alt="Ручки">
+      <h3>Набор ручек (10 шт)</h3>
+      <p class="price">290сом</p>
+    </div>
+	<div class="card">
+      <img src="пенал.jpeg" alt="Ручки">
+      <h3>Пенал</h3>
+      <p class="price">200сом</p>
+    </div>
+	<div class="card">
+      <img src="пенал.jpg" alt="Ручки">
+      <h3>Пенал</h3>
+      <p class="price">250сом</p>
+    </div>
+	<div class="card">
+      <img src="тетради.jpeg" alt="Ручки">
+      <h3>Набор тетрадей (10 шт)</h3>
+      <p class="price">590сом</p>
+    </div>
+	<div class="card">
+      <img src="карандаши.jpeg" alt="Ручки">
+      <h3>Набор карандашей (10 шт)</h3>
+      <p class="price">150сом</p>
+    </div>
+	
+	<div class="card">
+      <img src="калькулятор.jpg" alt="Ручки">
+      <h3>Калькулятор</h3>
+      <p class="price">150сом</p>
+    </div>
+	<div class="card">
+      <img src="календарь.jpg" alt="Ручки">
+      <h3>Календарь</h3>
+      <p class="price">60сом</p>
+    </div>
+	<div class="card">
+      <img src="блокноты.jpg" alt="Ручки">
+      <h3>Блокноты</h3>
+      <p class="price">390сом</p>
+    </div>
+	<div class="card">
+      <img src="цветные фломастиры.jpg" alt="Ручки">
+      <h3>Цветные фломастиры</h3>
+      <p class="price">99сом</p>
+    </div>
+	<div class="card">
+      <img src="дневник.jpg" alt="Ручки">
+      <h3>Дневник</h3>
+      <p class="price">сом</p>
+    </div>
+	<div class="card">
+      <img src="закладки.jpg" alt="Ручки">
+      <h3>Закладки</h3>
+      <p class="price">сом</p>
+    </div>
+	<div class="card">
+      <img src="степлер.jpg" alt="Ручки">
+      <h3>Степлер</h3>
+      <p class="price">сом</p>
+    </div>
+  </div>
+
+  <div class="section" id="other">
+    <div class="card">
+      <img src="Увлажнитель.jpg" alt="Увлажнитель">
+      <h3>Увлажнитель воздуха</h3>
+      <p class="price">3 200сом</p>
+    </div>
+	 <div class="card">
+      <img src="Освежитель.jpg" alt="">
+      <h3>Освежитель воздуха</h3>
+      <p class="price">1 200сом</p>
+    </div>
+	 <div class="card">
+      <img src="Освежитель1.jpg" alt="">
+      <h3>Освежитель воздуха</h3>
+      <p class="price">1 000сом</p>
+    </div>
+	 <div class="card">
+      <img src="Освежитель2.jpg" alt="">
+      <h3>Освежитель воздуха</h3>
+      <p class="price">1 900сом</p>
+    </div>
+	 <div class="card">
+      <img src="Освежитель3.jpg" alt="">
+      <h3>Освежитель воздуха</h3>
+      <p class="price">1 500сом</p>
+    </div>
+	 <div class="card">
+      <img src="Освежитель4.jpg" alt="">
+      <h3>Освежитель воздуха</h3>
+      <p class="price">1 200сом</p>
+    </div>
+	 <div class="card">
+      <img src="Освежитель5.jpg" alt="">
+      <h3>Освежитель воздуха</h3>
+      <p class="price">3 700сом</p>
+    </div>
+	 <div class="card">
+      <img src="Освежитель6.jpg" alt="">
+      <h3>Освежитель воздуха</h3>
+      <p class="price">2 200сом</p>
+    </div>
+  </div>
+
+  <script>
+    const tabs = document.querySelectorAll('.tab-btn');
+    const sections = document.querySelectorAll('.section');
+
+    tabs.forEach(btn => {
+      btn.addEventListener('click', () => {
+        tabs.forEach(b => b.classList.remove('active'));
+        sections.forEach(s => s.classList.remove('active'));
+
+        btn.classList.add('active');
+        document.getElementById(btn.dataset.tab).classList.add('active');
+      });
+    });
+  </script>
+
+</body>
+</html>

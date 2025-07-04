@@ -1,0 +1,503 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Детские товары</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      margin: 0;
+      background:red;
+      padding: 20px;
+    }
+    h1 {
+      text-align: center;
+      color:white;
+      margin-bottom: 20px;
+    }
+    .tabs {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 10px;
+      margin-bottom: 30px;
+    }
+    .tabs button {
+      padding: 10px 20px;
+      background:white;
+      border: none;
+      border-radius: 20px;
+      cursor: pointer;
+      font-weight: bold;
+      color: black;
+    }
+    .tabs button.active {
+      background: black;
+      color:white;
+    }
+    .section {
+      display: none;
+    }
+    .section.active {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(420px, 0fr));
+      gap: 30px;
+    }
+    .card {
+       background: white;
+      border-radius: 14px;
+      padding: 15px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+      transition: transform 0.2s;
+	  width: 250px;
+    }
+    .card:hover {
+      transform: translateY(-4px);
+    }
+    .card img {
+           width: 100%;
+      border-radius: 10px;
+      height: 200px;
+      object-fit: cover;
+    }
+    .card h3 {
+      font-size: 16px;
+      margin: 10px 0 5px;
+      color: #333;
+    }
+    .price {
+      font-weight: bold;
+      color: #1976d2;
+      font-size: 15px;
+    }
+  </style>
+</head>
+<body>
+
+  <h1> Детские товары</h1>
+
+  <div class="tabs">
+    <button class="tab-btn active" data-tab="toys">Игрушки</button>
+    <button class="tab-btn" data-tab="strollers">Коляски</button>
+    <button class="tab-btn" data-tab="rugs">Ковры и коврики</button>
+    <button class="tab-btn" data-tab="newborn">Новорожденным</button>
+    <button class="tab-btn" data-tab="walkers">Ходунки</button>
+    <button class="tab-btn" data-tab="other">Другое</button>
+  </div>
+
+  <!-- Игрушки -->
+  <div class="section active" id="toys">
+    <div class="card">
+      <img src="Мишка.jpg" alt="Мишка">
+      <h3>Плюшевый мишка</h3>
+      <p class="price">790сом</p>
+    </div>
+    <div class="card">
+      <img src="Лего.jpg" alt="Лего">
+      <h3>Конструктор LEGO City</h3>
+      <p class="price">1 850сом</p>
+    </div>
+	<div class="card">
+      <img src="мишка.jpeg" alt="">
+      <h3>Мишка</h3>
+      <p class="price">200сом</p>
+    </div>
+	<div class="card">
+      <img src="попит.jpeg" alt="">
+      <h3>Попит</h3>
+      <p class="price">150сом</p>
+    </div>
+	<div class="card">
+      <img src="машина.jpeg" alt="">
+      <h3>Машинка</h3>
+      <p class="price">300сом</p>
+    </div>
+	<div class="card">
+      <img src="мотоцикл.jpeg" alt="">
+      <h3>Мотоцикл</h3>
+      <p class="price">400сом</p>
+    </div>
+	<div class="card">
+      <img src="динозавр.jpeg" alt="">
+      <h3>Динозавры</h3>
+      <p class="price">600сом</p>
+    </div>
+	<div class="card">
+      <img src="кукла.jpeg" alt="">
+      <h3>Кукла</h3>
+      <p class="price">260сом</p>
+    </div>
+	<div class="card">
+      <img src="слоник.jpeg" alt="">
+      <h3>Слоник</h3>
+      <p class="price">350сом</p>
+    </div>
+	<div class="card">
+      <img src="утюг.jpeg" alt="">
+      <h3>Игрушечный утюг</h3>
+      <p class="price">170сом</p>
+    </div>
+	<div class="card">
+      <img src="чебурашка.jpeg" alt="">
+      <h3>Игрушечный чебурашка</h3>
+      <p class="price">130сом</p>
+    </div>
+	<div class="card">
+      <img src="велосипед детский.jpeg" alt="Лего">
+      <h3>Велосипед детский</h3>
+      <p class="price">3 850сом</p>
+    </div>
+  </div>
+
+  <!-- Коляски -->
+  <div class="section" id="strollers">
+    <div class="card">
+      <img src="Коляска.jpg" alt="Коляска">
+      <h3>Коляска 3 в 1 Comfort</h3>
+      <p class="price">15 900сом</p>
+    </div>
+    <div class="card">
+      <img src="Коляска9.jpeg" alt="Коляска">
+      <h3>Коляска Comfort </h3>
+      <p class="price">13 900сом</p>
+    </div>
+	<div class="card">
+      <img src="Коляска10.jpeg" alt="Коляска">
+      <h3>Коляска </h3>
+      <p class="price">8 900сом</p>
+    </div>
+	<div class="card">
+      <img src="коляска.jpeg" alt="Коляска">
+      <h3>Коляска </h3>
+      <p class="price">6 900сом</p>
+    </div>
+	<div class="card">
+      <img src="коляска2.jpeg" alt="Коляска">
+      <h3>Коляска </h3>
+      <p class="price">7 900сом</p>
+    </div>
+	<div class="card">
+      <img src="коляска3.jpeg" alt="Коляска">
+      <h3>Коляска </h3>
+      <p class="price">7 000сом</p>
+    </div>
+	<div class="card">
+      <img src="коляска4.jpeg" alt="Коляска">
+      <h3>Коляска </h3>
+      <p class="price">4 900сом</p>
+    </div>
+	<div class="card">
+      <img src="коляска5.jpeg" alt="Коляска">
+      <h3>Коляска </h3>
+      <p class="price">8 000сом</p>
+    </div>
+	<div class="card">
+      <img src="коляска6.jpeg" alt="Коляска">
+      <h3>Коляска </h3>
+      <p class="price">8 999сом</p>
+    </div>
+	<div class="card">
+      <img src="коляска7.jpeg" alt="Коляска">
+      <h3>Коляска </h3>
+      <p class="price">5 500сом</p>
+    </div>
+	<div class="card">
+      <img src="коляска8.jpeg" alt="Коляска">
+      <h3>Коляска </h3>
+      <p class="price">7 900сом</p>
+    </div>
+	<div class="card">
+      <img src="коляска1.jpeg" alt="Коляска">
+      <h3>Коляска </h3>
+      <p class="price">3 900сом</p>
+    </div>
+    </div>
+
+
+  <!-- Ковры и коврики -->
+  <div class="section" id="rugs">
+    <div class="card">
+      <img src="коврик.jpg" alt="Коврик">
+      <h3>Игровой коврик "Зверята"</h3>
+      <p class="price">1 200сом</p>
+    </div>
+
+    <div class="card">
+      <img src="коврик1.jpeg" alt="Коврик">
+      <h3>Игровой коврик </h3>
+      <p class="price">2 200сом</p>
+    </div>
+	 <div class="card">
+      <img src="коврик3.jpeg" alt="Коврик">
+      <h3>Коврик</h3>
+      <p class="price">1 000сом</p>
+    </div>
+	 <div class="card">
+      <img src="коврик.jpeg" alt="Коврик">
+      <h3>Коврик</h3>
+      <p class="price">2 900сом</p>
+    </div>
+	 <div class="card">
+      <img src="коврик гусь.jpeg" alt="Коврик">
+      <h3>Коврик</h3>
+      <p class="price">2 600сом</p>
+    </div>
+	 <div class="card">
+      <img src="коврик панда.jpeg" alt="Коврик">
+      <h3>Коврик</h3>
+      <p class="price">1 500сом</p>
+    </div>
+	 <div class="card">
+      <img src="коврик кошка.jpeg" alt="Коврик">
+      <h3>Коврик</h3>
+      <p class="price"> 900сом</p>
+    </div>
+	 <div class="card">
+      <img src="коврик мяч.jpeg" alt="Коврик">
+      <h3>Коврик</h3>
+      <p class="price">3 900сом</p>
+    </div>
+	 <div class="card">
+      <img src="коврик цветок.jpeg" alt="Коврик">
+      <h3>Коврик</h3>
+      <p class="price">3 000сом</p>
+    </div>
+	 <div class="card">
+      <img src="коврик арбуз.jpeg" alt="Коврик">
+      <h3>Коврик</h3>
+      <p class="price">2 600сом</p>
+    </div>
+	 <div class="card">
+      <img src="коврик ромашка.jpeg" alt="Коврик">
+      <h3>Коврик</h3>
+      <p class="price">1 300сом</p>
+    </div>
+
+    <div class="card">
+      <img src="коврик2.jpeg" alt="Коврик">
+      <h3>Коврик</h3>
+      <p class="price">1 900сом</p>
+    </div>
+  </div>
+  
+  
+
+  <!-- Товары для новорожденных -->
+  <div class="section" id="newborn">
+    <div class="card">
+      <img src="комплект пеленок.jpeg" alt="Пеленки">
+      <h3>Комплект пелёнок 3 шт</h3>
+      <p class="price">790сом</p>
+    </div>
+	 <div class="card">
+      <img src="покрывало.jpeg" alt="Бутылка детская.jpg">
+      <h3>Покрывало для новорожненных</h3>
+      <p class="price">340сом</p>
+    </div>
+	 <div class="card">
+      <img src="подушка1.jpeg" alt="">
+      <h3>Подушка детская</h3>
+      <p class="price">740сом</p>
+    </div>
+	 <div class="card">
+      <img src="каша1.jpeg" alt="">
+      <h3>Каша</h3>
+      <p class="price">390сом</p>
+    </div>
+	 <div class="card">
+      <img src="агуша.jpeg" alt="">
+      <h3>Агуша</h3>
+      <p class="price">140сом</p>
+    </div>
+	 <div class="card">
+      <img src="агуша1.jpeg" alt="">
+      <h3>Агуша</h3>
+      <p class="price">170сом</p>
+    </div>
+	 <div class="card">
+      <img src="мазь детская.jpeg" alt="">
+      <h3>Мазь детская</h3>
+      <p class="price">270сом</p>
+    </div>
+	 <div class="card">
+      <img src="каша.jpeg" alt="">
+      <h3>Каша</h3>
+      <p class="price">240сом</p>
+    </div>
+	 <div class="card">
+      <img src="одежда2.jpeg" alt="">
+      <h3>Одежда для новорожденных</h3>
+      <p class="price">540сом</p>
+    </div>
+	 <div class="card">
+      <img src="памперс.jpeg" alt="">
+      <h3>Памперс</h3>
+      <p class="price">100сом</p>
+    </div>
+	 <div class="card">
+      <img src="стол детский.jpeg" alt="">
+      <h3>Стол детский</h3>
+      <p class="price">3 340сом</p>
+    </div>
+    <div class="card">
+      <img src="Бутылка детская.jpg" alt="Бутылка детская.jpg">
+      <h3>Бутылочка антиколиковая</h3>
+      <p class="price">340сом</p>
+    </div>
+  </div>
+
+  <!-- Ходунки -->
+  <div class="section" id="walkers">
+    <div class="card">
+      <img src="Ходунок.jpg" alt="Ходунки">
+      <h3>Детские ходунки </h3>
+      <p class="price">3 950сом</p>
+    </div>
+	<div class="card">
+      <img src="Ходунок2.jpeg" alt="Ходунки">
+      <h3>Детские ходунки </h3>
+      <p class="price">4 490сом</p>
+    </div>
+	<div class="card">
+      <img src="Ходунок3.jpeg" alt="Ходунки">
+      <h3>Детские ходунки </h3>
+      <p class="price">1 300сом</p>
+    </div>
+	<div class="card">
+      <img src="Ходунок4.jpeg" alt="Ходунки">
+      <h3>Детские ходунки </h3>
+      <p class="price">2 110сом</p>
+    </div>
+	<div class="card">
+      <img src="Ходунок5.jpeg" alt="Ходунки">
+      <h3>Детские ходунки </h3>
+      <p class="price">2 600сом</p>
+    </div>
+	<div class="card">
+      <img src="Ходунок6.jpeg" alt="Ходунки">
+      <h3>Детские ходунки </h3>
+      <p class="price">3 900сом</p>
+    </div>
+	<div class="card">
+      <img src="Ходунок7.jpeg" alt="Ходунки">
+      <h3>Детские ходунки </h3>
+      <p class="price">2 000сом</p>
+    </div>
+	<div class="card">
+      <img src="Ходунок8.jpeg" alt="Ходунки">
+      <h3>Детские ходунки </h3>
+      <p class="price">4 050сом</p>
+    </div>
+	<div class="card">
+      <img src="Ходунок9.jpeg" alt="Ходунки">
+      <h3>Детские ходунки </h3>
+      <p class="price">2 900сом</p>
+    </div>
+	<div class="card">
+      <img src="Ходунок10.jpeg" alt="Ходунки">
+      <h3>Детские ходунки </h3>
+      <p class="price">6 450сом</p>
+    </div>
+	<div class="card">
+      <img src="Ходунок11.jpeg" alt="Ходунки">
+      <h3>Детские ходунки </h3>
+      <p class="price">4 450сом</p>
+    </div>
+	<div class="card">
+      <img src="Ходунок.jpeg" alt="Ходунки">
+      <h3>Детские ходунки </h3>
+      <p class="price">3 450сом</p>
+    </div>
+	<div class="card">
+      <img src="Ходунок1.jpeg" alt="Ходунки">
+      <h3>Детские ходунки </h3>
+      <p class="price">2 450сом</p>
+    </div>
+  </div>
+
+  <!-- Другое -->
+  <div class="section" id="other">
+    <div class="card">
+      <img src="сумка3.jpeg" alt="Рюкзак">
+      <h3>Детский рюкзак "Панда"</h3>
+      <p class="price">500сом</p>
+    </div>
+    <div class="card">
+      <img src="резинка.jpeg" alt="">
+      <h3>Резина жевательная</h3>
+      <p class="price">50сом</p>
+    </div>
+	 <div class="card">
+      <img src="шоколад1.jpeg" alt="">
+      <h3>Шоколад</h3>
+      <p class="price"> 100сом</p>
+    </div>
+	 <div class="card">
+      <img src="мыло.jpeg" alt="">
+      <h3>Мыло детское</h3>
+      <p class="price"> 60сом</p>
+    </div>
+	 <div class="card">
+      <img src="молоко.jpeg" alt="">
+      <h3>Молоко</h3>
+      <p class="price"> 70сом</p>
+    </div>
+	 <div class="card">
+      <img src="набор игрушек.jpeg" alt="">
+      <h3>Набор игрушек</h3>
+      <p class="price"> 200сом</p>
+    </div>
+	 <div class="card">
+      <img src="духи.jpeg" alt="">
+      <h3>Духи</h3>
+      <p class="price"> 150сом</p>
+    </div>
+	 <div class="card">
+      <img src="пистолет.jpeg" alt="">
+      <h3>Пистолет пузырь</h3>
+      <p class="price"> 190сом</p>
+    </div>
+	 <div class="card">
+      <img src="детская посуда.jpeg" alt="">
+      <h3>Детская посуда</h3>
+      <p class="price"> 500сом</p>
+    </div>
+	 <div class="card">
+      <img src="указатель.jpeg" alt="">
+      <h3>Указатель</h3>
+      <p class="price"> 100сом</p>
+    </div>
+	
+    
+
+    <div class="card">
+      <img src="сумка1.jpeg" alt="Рюкзак">
+      <h3>Детский рюкзак "Пони"</h3>
+      <p class="price">650сом</p>
+    </div>
+
+    <div class="card">
+      <img src="рюкзак.jpg" alt="Рюкзак">
+      <h3>Детский рюкзак "Котик"</h3>
+      <p class="price">590сом</p>
+    </div>
+  </div>
+
+  <script>
+    const tabs = document.querySelectorAll('.tab-btn');
+    const sections = document.querySelectorAll('.section');
+
+    tabs.forEach(btn => {
+      btn.addEventListener('click', () => {
+        tabs.forEach(b => b.classList.remove('active'));
+        sections.forEach(s => s.classList.remove('active'));
+
+        btn.classList.add('active');
+        document.getElementById(btn.dataset.tab).classList.add('active');
+      });
+    });
+  </script>
+
+</body>
+</html>
