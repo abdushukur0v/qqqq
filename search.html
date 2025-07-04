@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <title>Поиск по товарам</title>
+  <style>
+    body { font-family: Arial; padding: 20px; }
+    .result { margin-bottom: 10px; padding: 10px; border: 1px solid #ccc; border-radius: 6px; }
+    .highlight { background-color: yellow; }
+  </style>
+</head>
+<body>
+
+  <h1>Поиск по товарам</h1>
+  <input type="text" id="searchInput" placeholder="Введите название товара..." />
+  <button onclick="search()">Поиск</button>
+
+  <div id="results"></div>
+
+  <script>
+    const products = [
+      {
+        title: "Смартфон Samsung Galaxy",
+        description: "Современный гаджет с мощной камерой и AMOLED экраном.",
+        url: "samsung.html"
+      },
+      {
+        title: "Ноутбук HP Pavilion",
+        description: "Отличный выбор для работы и учёбы. 16 ГБ ОЗУ.",
+        url: "hp.html"
+      },
+      {
+        title: "Наушники JBL",
+        description: "Беспроводные наушники с качественным звуком.",
+        url: "jbl.html"
+      }
+    ];
+
+    function search() {
+      const query = document.getElementById("searchInput").value.toLowerCase();
+      const resultsDiv = document.getElementById("results");
+      resultsDiv.innerHTML = "";
+
+      if (!query) return;
+
+      const results = products.filter(item =>
+        item.title.toLowerCase().includes(query) ||
+        item.description.toLowerCase().includes(query)
+      );
+
+      if (results.length === 0) {
+        resultsDiv.innerHTML = "<p>Товар не найден.</p>";
+        return;
+      }
+
+      results.forEach(product => {
+        const div = document.createElement("div");
+        div.className = "result";
+        div.innerHTML = `
+          <a href="${product.url}"><strong>${highlight(product.title, query)}</strong></a><br/>
+          <span>${highlight(product.description, query)}</span>
+        `;
+        resultsDiv.appendChild(div);
+      });
+    }
+
+    function highlight(text, query) {
+      const regex = new RegExp(`(${query})`, "gi");
+      return text.replace(regex, '<span class="highlight">$1</span>');
+    }
+  </script>
+
+</body>
+</html>

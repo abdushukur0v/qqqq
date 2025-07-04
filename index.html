@@ -1,0 +1,456 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>RedBerries</title>
+  <link rel="stylesheet" href="style.css" />
+  <script src="https://js.stripe.com/v3/"></script>
+</head>
+<body>
+
+  <header>
+    <div class="top-bar">
+<input type="text" id="searchInput" placeholder="Введите название товара..." />
+<button onclick="search()">Поиск</button>
+
+<div id="results"></div>
+
+      <div>❤️ 👤 🛒</div>
+    </div>
+  </header>
+
+  <nav>
+    <a href=" %D0%B4%D0%B5%D1%82%D1%8F%D0%BC.html">Детям</a>
+    <a href=" %D0%BE%D0%B4%D0%B5%D0%B6%D0%B4%D0%B0.html">Одежда</a>
+    <a href=" %D0%B3%D0%B0%D0%B4%D0%B6%D0%B5%D1%82%D1%8B.html">Гаджеты</a>
+    <a href=" %D1%82%D0%B5%D1%85%D0%BD%D0%B8%D0%BA%D0%B0.html">Красота</a>
+    <a href=" %D0%B4%D0%BE%D0%BC.html">Дом</a>
+    <a href=" %D1%82%D0%B5%D1%85%D0%BD%D0%B8%D0%BA%D0%B0.html">Техника и электроника</a>
+    <a href=" %D1%81%D0%BF%D0%BE%D1%80%D1%82.html">Спорт</a>
+    <a href=" %D0%BF%D0%B0%D1%80%D1%84%D1%8E%D0%BC%D0%B5%D1%80%D0%B8%D1%8F.html">Парфюмерия</a>
+    <a href=" %D0%BF%D0%B8%D1%82%D0%B0%D0%BD%D0%B8%D0%B5.html">Питание</a>
+	
+  </nav>
+
+  <section class="banner">
+    <h2>Летняя распродажа</h2>
+    <p>Скидки до 70% на тысячи товаров</p>
+    <div class="timer">Осталось:<div id="timer">Загрузка таймера...</div>
+</div><br/>
+	
+    <button><a href=" %D1%80%D0%B0%D1%81%D0%BF%D1%80%D0%BE%D0%B4%D0%B0%D0%B6%D0%B0.html">Смотреть товары</button></a>
+  </section>
+
+  <div class="categories">
+    <div>📈<br><a href=" %D1%82%D0%BE%D0%BF%20%D0%BF%D1%80%D0%BE%D0%B4a%D0%B6.html">Топ продаж</div></a>
+    <div>👗<br><a href=" %D0%BE%D0%B4%D0%B5%D0%B6%D0%B4%D0%B0.html">Одежда</div></a>
+    <div>👟<br> <a href="%D0%BE%D0%B1%D1%83%D0%B2%D1%8C.html">Обувь</div></a>
+	
+    <div>💄<br><a href="%D0%BA%D1%80%D0%B0%D1%81%D0%BE%D1%82%D0%B0.html">Красота</div></a>
+	
+    <div>🏠<br> <a href="%D0%B4%D0%BE%D0%BC.html">Дом</div></a>
+    <div>📱<br> <a href="%D1%82%D0%B5%D1%85%D0%BD%D0%B8%D0%BA%D0%B0.html">Техника и <br>электроника</div></a>
+    <div>🌸<br><a href="%D0%BF%D0%B0%D1%80%D1%84%D1%8E%D0%BC%D0%B5%D1%80%D0%B8%D1%8F.html">Парфюмерия</div></a>
+    <div>❤️<br> <a href="%D0%B8%D0%B7%D0%B1%D1%80%D0%B0%D0%BD%D0%BD%D1%8B%D0%B9.html">Избранное</div></a>
+    <div>🎁<br> <a href="%D0%BF%D0%BE%D0%B4%D0%B0%D1%80%D0%BA%D0%B8.html">Подарки</div></a>
+    <div>🆕<br> <a href="">Новинки</div></a>
+  </div>
+  
+  
+  <section class="hot-deals">
+  <div class="hot-header">
+    <h3>Горячие предложения</h3>
+    <a href="#">Смотреть все</a>
+  </div>
+  <div class="hot-cards">
+    <div class="hot-card">
+      <span class="discount">-40%</span>
+      <img src="ader.png" alt="Платье" />
+      <h4>Бомбер коричневый</h4>
+      <p>Бренд</p>
+      <div class="price">
+        <strong>1 999 сом</strong> <s>2 500 сом</s>
+      </div>
+      <button>🛒</button>
+    </div>
+    <div class="hot-card">
+      <span class="discount">-25%</span>
+      <img src="ader1.png" alt="Футболка" />
+      <h4>Спортивка женская</h4>
+      <p>Бренд</p>
+      <div class="price">
+        <strong>990 сом</strong> <s>2 000 сом</s>
+      </div>
+      <button>🛒</button>
+    </div>
+    <div class="hot-card">
+      <span class="discount">-30%</span>
+      <img src="ader2.png" alt="Куртка" />
+      <h4>Футболка и штаны Тоджи</h4>
+      <p>Бренд</p>
+      <div class="price">
+        <strong>899 сом</strong> <s>1 690 сом</s>
+      </div>
+      <button>🛒</button>
+    </div>
+    <div class="hot-card">
+      <span class="discount">-50%</span>
+      <img src="ader3.png" alt="Туфли" />
+      <h4>Спортивка мужская</h4>
+      <p>Бренд</p>
+      <div class="price">
+        <strong>1 999 сом</strong> <s>3 999 сом</s>
+      </div>
+      <button>🛒</button>
+    </div>
+  </div>
+</section>
+
+    
+
+
+    <section class="brands-section">
+    <h3>Популярные бренды <a href="#" style="float:right;">Все бренды</a></h3>
+    <div class="brands">
+      <div><a href="C:/Users/LEK/Desktop/Gucci.html">GUCCI</a></div>
+      <div><a href="%D0%BB%D1%83%D0%B8%D1%81%20%D0%B2%D0%B8%D1%82%D0%BE%D0%BD.html#cart">LOUIS VUITTON</a></div>
+      <div><a href="prada.html">PRADA</a></div>
+      <div><a href="versace.html">VERSACE</a></div>
+      <div><a href="chanel.html">CHANEL</a></div>
+      <div><a href="C:/Users/balenciaga.html">BALENCIAGA</a></div>
+    </div>
+  </section>
+  <!-- Регистрация -->
+  <div id="registerSection">
+    <h2>Регистрация</h2>
+    <form id="registerForm">
+      <input type="text" id="regName" placeholder="Имя" required />
+      <input type="email" id="regEmail" placeholder="Email" required />
+      <input type="password" id="regPassword" placeholder="Пароль" required />
+      <input type="password" id="regConfirmPassword" placeholder="Повторите пароль" required />
+      <button type="submit">Зарегистрироваться</button>
+    </form>
+    <span class="link" id="showLogin">Уже есть аккаунт? Войти</span>
+    <div id="registerMessage" class="message"></div>
+  </div>
+
+  <!-- Вход -->
+  <div id="loginSection" style="display:none;">
+    <h2>Вход</h2>
+    <form id="loginForm">
+      <input type="email" id="loginEmail" placeholder="Email" required />
+      <input type="password" id="loginPassword" placeholder="Пароль" required />
+      <button type="submit">Войти</button>
+    </form>
+    <span class="link" id="showRegister">Нет аккаунта? Зарегистрироваться</span>
+    <div id="loginMessage" class="message"></div>
+  </div>
+  <section class="features">
+    <div class="feature">
+      <div class="feature-icon">⏱</div>
+      <strong>Быстрая доставка</strong><br>
+      <small>От 1 дня по всей Киргизии</small>
+    </div>
+    <div class="feature">
+      <div class="feature-icon">🛡</div>
+      <strong>Гарантия качества</strong><br>
+      <small>Проверенные товары</small>
+    </div>
+    <div class="feature">
+      <div class="feature-icon">👜</div>
+      <strong>Широкий ассортимент</strong><br>
+      <small>Более 1 000 000 товаров</small>
+    </div>
+    <div class="feature">
+      <div class="feature-icon">💳</div>
+      <strong>Удобная оплата</strong><br>
+      <small>Любым удобным способом</small>
+	  <form id="payment-form">
+  <div id="card-element"><!-- Stripe вставит сюда поле для карты --></div>
+  <button id="submit">Оплатить</button>
+  <p id="payment-result"></p>
+</form>
+    </div>
+	
+  </section>
+  </section>
+  
+
+<script>
+  // Укажи дату окончания таймера
+  const targetDate = new Date("2025-07-01T00:00:00").getTime();
+
+  function updateTimer() {
+    const now = new Date().getTime();
+    const timeLeft = targetDate - now;
+
+    if (timeLeft <= 0) {
+      document.getElementById("timer").textContent = "Время вышло!";
+      clearInterval(timerInterval);
+      return;
+    }
+
+    const days = Math.floor(timeLeft / (1000 * 60 * 60 * 360));
+    const hours = Math.floor((timeLeft % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+    const minutes = Math.floor((timeLeft % (1000 * 60 * 60)) / (1000 * 60));
+    const seconds = Math.floor((timeLeft % (1000 * 60)) / 1000);
+
+    document.getElementById("timer").textContent =
+      `${days}д ${hours}ч ${minutes}м ${seconds}с`;
+  }
+
+  const timerInterval = setInterval(updateTimer, 1000);
+  updateTimer();
+</script>
+<script>
+  // Инициализируй Stripe с публичным ключом (замени на свой test ключ)
+  const stripe = Stripe("pk_test_XXXXXXXXXXXXXXXXXXXXXXXX"); // <- твой public key
+
+  const elements = stripe.elements();
+  const card = elements.create("card");
+  card.mount("#card-element");
+
+  const form = document.getElementById("payment-form");
+  const resultContainer = document.getElementById("payment-result");
+
+  form.addEventListener("submit", async (event) => {
+    event.preventDefault();
+
+    const {error, paymentMethod} = await stripe.createPaymentMethod({
+      type: 'card',
+      card: card,
+    });
+
+    if (error) {
+      resultContainer.textContent = error.message;
+    } else {
+      // Обычно тут отправляется ID метода оплаты на сервер
+      resultContainer.textContent = "Карта успешно добавлена. ID: " + paymentMethod.id;
+    }
+  });
+</script>
+  <script>
+    const registerSection = document.getElementById('registerSection');
+    const loginSection = document.getElementById('loginSection');
+
+    const showLoginLink = document.getElementById('showLogin');
+    const showRegisterLink = document.getElementById('showRegister');
+
+    // Показать форму входа
+    showLoginLink.addEventListener('click', () => {
+      registerSection.style.display = 'none';
+      loginSection.style.display = 'block';
+      clearMessages();
+    });
+
+    // Показать форму регистрации
+    showRegisterLink.addEventListener('click', () => {
+      loginSection.style.display = 'none';
+      registerSection.style.display = 'block';
+      clearMessages();
+    });
+
+    // Очистка сообщений
+    function clearMessages() {
+      document.getElementById('registerMessage').textContent = '';
+      document.getElementById('loginMessage').textContent = '';
+    }
+
+    // Валидация email
+    function validateEmail(email) {
+      const re = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+      return re.test(email.toLowerCase());
+    }
+
+    // Регистрация
+    document.getElementById('registerForm').addEventListener('submit', function(e) {
+      e.preventDefault();
+      clearMessages();
+
+      const name = document.getElementById('regName').value.trim();
+      const email = document.getElementById('regEmail').value.trim().toLowerCase();
+      const password = document.getElementById('regPassword').value;
+      const confirmPassword = document.getElementById('regConfirmPassword').value;
+
+      const message = document.getElementById('registerMessage');
+
+      if (name.length < 2) {
+        message.textContent = 'Введите корректное имя.';
+        message.className = 'message error';
+        return;
+      }
+      if (!validateEmail(email)) {
+        message.textContent = 'Некорректный email.';
+        message.className = 'message error';
+        return;
+      }
+      if (password.length < 6) {
+        message.textContent = 'Пароль должен быть не короче 6 символов.';
+        message.className = 'message error';
+        return;
+      }
+      if (password !== confirmPassword) {
+        message.textContent = 'Пароли не совпадают.';
+        message.className = 'message error';
+        return;
+      }
+
+      // Проверка, что email еще не зарегистрирован
+      const users = JSON.parse(localStorage.getItem('users') || '[]');
+      if (users.some(user => user.email === email)) {
+        message.textContent = 'Пользователь с таким email уже зарегистрирован.';
+        message.className = 'message error';
+        return;
+      }
+
+      // Сохраняем пользователя
+      users.push({ name, email, password });
+      localStorage.setItem('users', JSON.stringify(users));
+
+      message.textContent = 'Регистрация прошла успешно!';
+      message.className = 'message success';
+
+      this.reset();
+
+      // Можно переключить на вход автоматически
+      setTimeout(() => {
+        showLoginLink.click();
+      }, 1500);
+    });
+
+    // Вход
+document.getElementById('loginForm').addEventListener('submit', function(e) {
+  e.preventDefault();
+  clearMessages();
+
+  const email = document.getElementById('loginEmail').value.trim().toLowerCase();
+  const password = document.getElementById('loginPassword').value;
+  const message = document.getElementById('loginMessage');
+
+  const users = JSON.parse(localStorage.getItem('users') || '[]');
+
+  // Ищем пользователя с таким email и паролем
+  const user = users.find(u => u.email.toLowerCase() === email && u.password === password);
+
+  if (!user) {
+    message.textContent = 'Неверный email или пароль.';
+    message.className = 'message error';
+    return;
+  }
+
+  message.textContent = `Добро пожаловать, ${user.name}! Вы успешно вошли.`;
+  message.className = 'message success';
+
+  this.reset();
+
+  // Здесь можно делать переход на другую страницу или отображать контент для авторизованного пользователя
+});
+
+  </script>
+
+  <script>
+  function search() {
+    const query = document.getElementById("searchInput").value.toLowerCase();
+    const resultsDiv = document.getElementById("results");
+    resultsDiv.innerHTML = "";
+
+    if (!query) return;
+
+    const results = products.filter(item =>
+      item.title.toLowerCase().includes(query) ||
+      item.description.toLowerCase().includes(query)
+    );
+
+    if (results.length === 0) {
+      resultsDiv.innerHTML = "<p>Товар не найден.</p>";
+      return;
+    }
+
+    results.forEach(product => {
+      const div = document.createElement("div");
+      div.className = "result";
+      div.innerHTML = `
+        <a href="${product.url}"><strong>${highlight(product.title, query)}</strong></a><br/>
+        <span>${highlight(product.description, query)}</span>
+      `;
+      resultsDiv.appendChild(div);
+    });
+  }
+
+  function highlight(text, query) {
+    const regex = new RegExp(`(${query})`, "gi");
+    return text.replace(regex, '<span style="background-color: yellow;">$1</span>');
+  }
+</script>
+<script>
+  const products = [
+    {
+      title: "Смартфон Айфон 15",
+      description: "Современный гаджет с мощной камерой и AMOLED экраном.",
+      url: "file:///%D1%82%D0%B5%D1%85%D0%BD%D0%B8%D0%BA%D0%B0.html"
+    },
+    {
+      title: "Обеденный стол",
+      description: "Отличный выбор для дома",
+      url: "file:///%D0%B4%D0%BE%D0%BC.html"
+    },
+    {
+      title: "Плюшевый мишка",
+      description: "мягкие игрушки для вашего ребенка",
+      url: "file:///%D0%B4%D0%B5%D1%82%D1%8F%D0%BC.html"
+    },
+    {
+      title: "Маникюрный набор 7 в 1",
+      description: "мягкие игрушки для вашего ребенка",
+      url: "file:///%D0%BA%D1%80%D0%B0%D1%81%D0%BE%D1%82%D0%B0.html"
+    },
+    {
+      title: "Травяной чай Detox",
+      description: "Отличный выбор для ухода",
+      url: "file:///%D0%BA%D1%80%D0%B0%D1%81%D0%BE%D1%82%D0%B0.html"
+    },
+    {
+      title: "Липолитический гель",
+      description: "Отличный выбор для ухода",
+      url: "file:///%D0%BA%D1%80%D0%B0%D1%81%D0%BE%D1%82%D0%B0.html"
+    },
+    {
+      title: "Скраб с морской солью",
+      description: "Отличный выбор для ухода",
+      url: "file:///%D0%BA%D1%80%D0%B0%D1%81%D0%BE%D1%82%D0%B0.html"
+    },
+    {
+      title: "Крем с аргановым маслом",
+      description: "Отличный выбор для ухода",
+      url: "file:///%D0%BA%D1%80%D0%B0%D1%81%D0%BE%D1%82%D0%B0.html"
+    },
+    {
+      title: "Тушь Volume Max",
+      description: "Отличный выбор для ухода",
+      url: "file:///%D0%BA%D1%80%D0%B0%D1%81%D0%BE%D1%82%D0%B0.html"
+    },
+    {
+      title: "Тональный крем Perfect Skin",
+      description: "Отличный выбор для ухода",
+      url: "file:///%D0%BA%D1%80%D0%B0%D1%81%D0%BE%D1%82%D0%B0.html"
+    },
+    {
+      title: "Dior Sauvage",
+      description: "Отличный выбор для ухода",
+      url: "file:///%D0%BF%D0%B0%D1%80%D1%84%D1%8E%D0%BC%D0%B5%D1%80%D0%B8%D1%8F.html"
+    },
+    {
+      title: "Bleu de Chanel",
+      description: "Отличный выбор для ухода",
+      url: "file:///%D0%BF%D0%B0%D1%80%D1%84%D1%8E%D0%BC%D0%B5%D1%80%D0%B8%D1%8F.html"
+    },
+    {
+      title: "YSL Libre",
+      description: "Отличный выбор для ухода",
+      url: "file:///%D0%BF%D0%B0%D1%80%D1%84%D1%8E%D0%BC%D0%B5%D1%80%D0%B8%D1%8F.html"
+    }
+	
+	
+  ];
+</script>
