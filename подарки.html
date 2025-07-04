@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <title>Подарки</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      background-color:red;
+      font-family: 'Segoe UI', sans-serif;
+      color: white;
+    }
+
+    header {
+      text-align: center;
+      padding: 40px 20px 20px;
+    }
+
+    header h1 {
+      font-size: 36px;
+      margin: 0;
+      font-weight: 600;
+      letter-spacing: 1px;
+    }
+
+    .gift-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(400px, 0fr));
+      gap: 20px;
+      padding: 30px;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    .gift-card {
+      background: #fff;
+      color: #1f2937;
+      border-radius: 16px;
+      overflow: hidden;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+      transition: transform 0.3s;
+    }
+
+    .gift-card:hover {
+      transform: translateY(-5px);
+    }
+
+    .gift-card img {
+      width: 100%;
+      height: 180px;
+      object-fit: cover;
+    }
+
+    .gift-content {
+      padding: 16px;
+    }
+
+    .gift-content h3 {
+      margin: 0 0 8px;
+      font-size: 18px;
+      color: black;
+    }
+
+    .gift-content p {
+      margin: 0;
+      font-weight: bold;
+      color: black;
+    }
+
+    footer {
+      text-align: center;
+      padding: 20px;
+      font-size: 14px;
+      color: #f3f4f6;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1> Идеи для Подарков</h1>
+  </header>
+
+  <div class="gift-grid">
+    <div class="gift-card">
+      <img src="набор косметики.jpg" alt="Подарок">
+      <div class="gift-content">
+        <h3>Подарочный набор SPA</h3>
+        <p>от 3 500сом</p>
+      </div>
+    </div>
+
+    <div class="gift-card">
+      <img src="свеча .jpg" alt="Подарок">
+      <div class="gift-content">
+        <h3>Ароматическая свеча</h3>
+        <p>1 200сом</p>
+      </div>
+    </div>
+
+    <div class="gift-card">
+      <img src="набор чая.jpg" alt="Подарок">
+      <div class="gift-content">
+        <h3>Элитный чай в коробке</h3>
+        <p>2 900сом</p>
+      </div>
+    </div>
+
+    <div class="gift-card">
+      <img src="купон на массаж.jpg" alt="Подарок">
+      <div class="gift-content">
+        <h3>Сертификат на массаж</h3>
+        <p>от 5 000сом</p>
+      </div>
+    </div>
+  </div>
+
+  <footer>
+    © 2025 Все права защищены. Подарки от души ❤️
+  </footer>
+
+</body>
+</html>

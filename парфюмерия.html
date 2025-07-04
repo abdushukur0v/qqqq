@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <title>Парфюмерия</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: red;
+      padding: 20px;
+      margin: 0;
+    }
+
+    h1 {
+      text-align: center;
+      color: white;
+      margin-bottom: 20px;
+    }
+
+    .tabs {
+      display: flex;
+      justify-content: center;
+      gap: 15px;
+      margin-bottom: 30px;
+    }
+
+    .tabs button {
+      padding: 10px 20px;
+      background: white;
+      border: none;
+      border-radius: 20px;
+      cursor: pointer;
+      font-weight: bold;
+      color: black;
+      transition: 0.3s;
+    }
+
+    .tabs button.active {
+      background: black;
+      color: white;
+    }
+
+    .section {
+      display: none;
+      grid-template-columns: repeat(auto-fit, minmax(420px, 0fr));
+      gap: 30px;
+    }
+
+    .section.active {
+      display: grid;
+    }
+
+    .card {
+      background: white;
+      border-radius: 14px;
+      padding: 15px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+      text-align: center;
+	  width: 250px;
+    }
+
+    .card img {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+      border-radius: 8px;
+    }
+
+    .card h3 {
+      margin: 10px 0 6px;
+      font-size: 16px;
+      color: #111827;
+    }
+
+    .card p {
+      font-weight: bold;
+      color: black;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Парфюмерия</h1>
+
+  <div class="tabs">
+    <button class="tab-btn active" data-tab="male">Мужская</button>
+    <button class="tab-btn" data-tab="female">Женская</button>
+  </div>
+
+  <div id="male" class="section active">
+    <div class="card">
+      <img src="духимужские.jpg" alt="Мужской парфюм">
+      <h3>Dior Sauvage</h3>
+      <p>19 000сом</p>
+    </div>
+    <div class="card">
+      <img src="духи мужские.jpg" alt="Мужской парфюм">
+      <h3>Dior Sauvage</h3>
+      <p>12 000сом</p>
+    </div>
+	<div class="card">
+      <img src="духи мужские1.jpg" alt="Мужской парфюм">
+      <h3>BVLGARI</h3>
+      <p>11 000сом</p>
+    </div>
+	<div class="card">
+      <img src="духи мужские2.jpg" alt="Мужской парфюм">
+      <h3>TOBACCO</h3>
+      <p>15 000сом</p>
+    </div>
+	<div class="card">
+      <img src="духи мужские3.jpg" alt="Мужской парфюм">
+      <h3>X-SERIES</h3>
+      <p>5 000сом</p>
+    </div>
+	<div class="card">
+      <img src="духи мужские4.jpg" alt="Мужской парфюм">
+      <h3>ARAMIS</h3>
+      <p>13 000сом</p>
+    </div>
+	<div class="card">
+      <img src="духи мужские5.jpg" alt="Мужской парфюм">
+      <h3>1 MILLION</h3>
+      <p>17 000сом</p>
+    </div>
+	<div class="card">
+      <img src="духи мужские6.jpg" alt="Мужской парфюм">
+      <h3>LOEVE 7</h3>
+      <p>19 000сом</p>
+    </div>
+  </div>
+
+  <div id="female" class="section">
+    <div class="card">
+      <img src="духии.jpg" alt="Женский парфюм">
+      <h3>Chanel No.5</h3>
+      <p>13 000сом</p>
+    </div>
+	 <div class="card">
+      <img src="духи шанель.jpg" alt="Женский парфюм">
+      <h3>Chanel </h3>
+      <p>16 000сом</p>
+    </div>
+    <div class="card">
+      <img src="духи женские3.jpg" alt="Женский парфюм">
+      <h3>YSL Libre</h3>
+      <p>10 200сом</p>
+    </div>
+	<div class="card">
+      <img src="духи йсл.jpg" alt="Женский парфюм">
+      <h3>YSL Libre</h3>
+      <p>9 200сом</p>
+    </div>
+	 <div class="card">
+      <img src="духи версачи.jpg" alt="Женский парфюм">
+      <h3>Versace</h3>
+      <p>7 000сом</p>
+    </div>
+	<div class="card">
+      <img src="духи версачи1.jpg" alt="Женский парфюм">
+      <h3>Versace</h3>
+      <p>9 000сом</p>
+    </div>
+	<div class="card">
+      <img src="духи версачи2.jpg" alt="Женский парфюм">
+      <h3>Versace</h3>
+      <p>6 999сом</p>
+    </div>
+	<div class="card">
+      <img src="духи гуччи.jpg" alt="Женский парфюм">
+      <h3>Gucci</h3>
+      <p>12 700сом</p>
+    </div>
+	<div class="card">
+      <img src="духи гуччи1.jpg" alt="Женский парфюм">
+      <h3>Gucci</h3>
+      <p>9 999сом</p>
+    </div>
+	<div class="card">
+      <img src="духи гуччи2.jpg" alt="Женский парфюм">
+      <h3>Gucci</h3>
+      <p>11 999сом</p>
+    </div>
+  </div>
+
+  <script>
+    const tabs = document.querySelectorAll('.tab-btn');
+    const sections = document.querySelectorAll('.section');
+
+    tabs.forEach(tab => {
+      tab.addEventListener('click', () => {
+        tabs.forEach(btn => btn.classList.remove('active'));
+        sections.forEach(sec => sec.classList.remove('active'));
+
+        tab.classList.add('active');
+        document.getElementById(tab.dataset.tab).classList.add('active');
+      });
+    });
+  </script>
+
+</body>
+</html>

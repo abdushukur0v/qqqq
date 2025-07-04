@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <title>Обувь</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background:red;
+      margin: 0;
+      padding: 20px;
+    }
+
+    h1 {
+      text-align: center;
+      color: white;
+      margin-bottom: 20px;
+    }
+
+    .category-tabs {
+      display: flex;
+      justify-content: center;
+      gap: 10px;
+      margin-bottom: 20px;
+    }
+
+    .category-tabs button {
+      padding: 10px 16px;
+      background: white;
+      border: none;
+      border-radius: 20px;
+      cursor: pointer;
+      font-weight: 600;
+      transition: 0.2s;
+    }
+
+    .category-tabs button.active {
+      background: #1f2937;
+      color: white;
+    }
+
+    .section {
+      display: none;
+    }
+
+    .section.active {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 20px;
+      margin-bottom: 40px;
+    }
+
+    .card {
+      background: white;
+      border-radius: 12px;
+      padding: 14px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+      text-align: center;
+    }
+
+    .card img {
+      width: 100%;
+      height: 160px;
+      object-fit: cover;
+      border-radius: 8px;
+    }
+
+    .card h3 {
+      margin: 10px 0 5px;
+      font-size: 16px;
+      color: #111827;
+    }
+
+    .price {
+      font-weight: bold;
+      color: #4b5563;
+    }
+
+    .filters {
+      background: white;
+      border-radius: 12px;
+      padding: 20px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+    }
+
+    .filters h2 {
+      margin-bottom: 15px;
+      font-size: 18px;
+      color: #111827;
+    }
+
+    .filter-group {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 15px;
+      margin-bottom: 15px;
+    }
+
+    .filter-group label {
+      display: flex;
+      flex-direction: column;
+      font-size: 14px;
+      color: #374151;
+    }
+
+    .filter-group select,
+    .filter-group input {
+      padding: 5px 8px;
+      border: 1px solid #d1d5db;
+      border-radius: 6px;
+      margin-top: 4px;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Обувь</h1>
+
+  <div class="category-tabs">
+    <button class="tab-btn active" data-tab="men">Мужская</button>
+    <button class="tab-btn" data-tab="women">Женская</button>
+    <button class="tab-btn" data-tab="kids">Детская</button>
+  </div>
+
+  
+
+  <div class="filters">
+    <h2>Фильтры</h2>
+    <div class="filter-group">
+      <label>
+        Размеры
+        <select>
+          <option>Все</option>
+          <option>20</option>
+		  <option>21</option>
+		  <option>22</option>
+		  <option>23</option>
+		  <option>24</option>
+		  <option>25</option>
+		  <option>26</option>
+		  <option>27</option>
+		  <option>28</option>
+		  <option>29</option>
+		  <option>30</option>
+		  <option>31</option>
+		  <option>32</option>
+		  <option>33</option>
+		  <option>34</option>
+		  <option>35</option>
+		  <option>36</option>
+          <option>37</option>
+          <option>38</option>
+          <option>39</option>
+          <option>40</option>
+          <option>41</option>
+          <option>42</option>
+          <option>43</option>
+        </select>
+      </label>
+
+      <label>
+        Расцветка
+        <input type="text" placeholder="Напр. узор, однотон">
+      </label>
+
+      <label>
+        Доставка
+        <select>
+          <option>Все</option>
+          <option>Бесплатная</option>
+          <option>Платная</option>
+        </select>
+      </label>
+
+      <label>
+        Цена до
+        <input type="number" placeholder="сом">
+      </label>
+
+      <label>
+        Цвет
+        <input type="text" placeholder="Черный, белый...">
+      </label>
+
+      <label>
+        Бренд
+        <input type="text" placeholder="Adidas, Puma...">
+      </label>
+    </div>
+  </div>
+  <div id="men" class="section active">
+    <div class="card">
+      <img src="https://via.placeholder.com/300x160?text=Кроссовки+муж" alt="Обувь">
+      <h3>Кроссовки Nike</h3>
+      <p class="price">7 500сом</p>
+    </div>
+  </div><br>
+  
+<br>
+  <div id="women" class="section">
+    <div class="card">
+      <img src="https://via.placeholder.com/300x160?text=Туфли+жен" alt="Обувь">
+      <h3>Туфли Zara</h3>
+      <p class="price">5 800сом</p>
+    </div>
+  </div>
+
+  <div id="kids" class="section">
+    <div class="card">
+      <img src="https://via.placeholder.com/300x160?text=Детская+обувь" alt="Обувь">
+      <h3>Кеды для мальчика</h3>
+      <p class="price">2 200сом</p>
+    </div>
+  </div>
+
+  <script>
+    const tabs = document.querySelectorAll('.tab-btn');
+    const sections = document.querySelectorAll('.section');
+
+    tabs.forEach(tab => {
+      tab.addEventListener('click', () => {
+        tabs.forEach(btn => btn.classList.remove('active'));
+        sections.forEach(sec => sec.classList.remove('active'));
+
+        tab.classList.add('active');
+        const target = tab.dataset.tab;
+        document.getElementById(target).classList.add('active');
+      });
+    });
+  </script>
+
+</body>
+</html>

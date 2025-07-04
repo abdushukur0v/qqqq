@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Одежда</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background: red;
+      padding: 20px;
+      margin: 0;
+    }
+    h1 {
+      text-align: center;
+      color: white;
+    }
+    .filters, .tabs {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 15px;
+      margin-top: 20px;
+    }
+    .tab-button, .filter-select {
+      background: #ecf0f1;
+      border: none;
+      padding: 10px 15px;
+      border-radius: 8px;
+      font-weight: bold;
+      color: black;
+      cursor: pointer;
+    }
+    .tab-button.active {
+      background: #2c3e50;
+      color: white;
+    }
+    .clothing-grid {
+      display: flex;
+	  justify-content: left;
+	  flex-wrap:wrap;
+      gap: 150px;
+    }
+	
+
+    .product {
+      background: white;
+      border-radius: 14px;
+      padding: 15px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+      transition: transform 0.2s;
+	  width: 250px;
+    }
+    .product:hover {
+      transform: translateY(-4px);
+    }
+    .product img {
+      width: 100%;
+      border-radius: 10px;
+      height: 200px;
+      object-fit: cover;
+    }
+    .product h3 {
+      margin: 10px 0 5px;
+      font-size: 16px;
+      color: #333;
+    }
+    .price {
+      font-size: 15px;
+      color: #2c3e50;
+      font-weight: bold;
+    }
+    .colors {
+      margin-top: 10px;
+    }
+    .color-circle {
+      display: inline-block;
+      width: 18px;
+      height: 18px;
+      border-radius: 50%;
+      margin-right: 6px;
+      border: 2px solid #ccc;
+      cursor: pointer;
+    }
+    .color-circle.selected {
+      border: 2px solid #2c3e50;
+    }
+    .hidden {
+      display: none;
+    }
+  </style>
+</head>
+<body>
+
+  <h1> Одежда</h1>
+
+  <div class="tabs">
+    <button class="tab-button active" onclick="filterCategory('men')">Мужская</button>
+    <button class="tab-button" onclick="filterCategory('women')">Женская</button>
+    <button class="tab-button" onclick="filterCategory('kids')">Детская</button>
+  </div>
+
+  <div class="filters">
+    <select class="filter-select" id="sizeFilter" onchange="applyFilters()">
+      <option value="">Размер</option>
+      <option value="s">S</option>
+      <option value="m">M</option>
+      <option value="l">L</option>
+    </select>
+    <select class="filter-select" id="brandFilter" onchange="applyFilters()">
+      <option value="">Бренд</option>
+      <option value="adidas">Adidas</option>
+      <option value="nike">Nike</option>
+      <option value="hm">H&M</option>
+    </select>
+  </div><br>
+  
+  <div class="clothing-grid" id="productContainer">
+    <!-- Пример товара -->
+    <div class="product category-men size-m brand-nike">
+      <img src="ader.jpeg" alt="Футболка" data-img-red="https://via.placeholder.com/300x200/ff4c4c/ffffff?text=Красная+футболка" data-img-black="https://via.placeholder.com/300x200/000000/ffffff?text=Чёрная+футболка" data-img-white="https://via.placeholder.com/300x200/ffffff/000000?text=Белая+футболка">
+      <h3>Футболка Nike</h3>
+      <p class="price">990сом</p>
+      <div class="colors">
+        <span class="color-circle" style="background:red" onclick="changeColor(this, 'red')"></span>
+        <span class="color-circle" style="background:black" onclick="changeColor(this, 'black')"></span>
+        <span class="color-circle" style="background:white; border: 2px solid #ccc;" onclick="changeColor(this, 'white')"></span>
+      </div>
+    </div>
+	
+	<div class="product category-men size-m brand-nike">
+      <img src="ader.jpeg" alt="Футболка" data-img-red="https://via.placeholder.com/300x200/ff4c4c/ffffff?text=Красная+футболка" data-img-black="https://via.placeholder.com/300x200/000000/ffffff?text=Чёрная+футболка" data-img-white="https://via.placeholder.com/300x200/ffffff/000000?text=Белая+футболка">
+      <h3>Футболка Nike</h3>
+      <p class="price">990сом</p>
+      <div class="colors">
+        <span class="color-circle" style="background:red" onclick="changeColor(this, 'red')"></span>
+        <span class="color-circle" style="background:black" onclick="changeColor(this, 'black')"></span>
+        <span class="color-circle" style="background:white; border: 2px solid #ccc;" onclick="changeColor(this, 'white')"></span>
+      </div>
+    </div>
+
+ 
+    <div class="product category-men size-m brand-nike">
+      <img src="ader.jpeg" alt="Футболка" data-img-red="https://via.placeholder.com/300x200/ff4c4c/ffffff?text=Красная+футболка" data-img-black="https://via.placeholder.com/300x200/000000/ffffff?text=Чёрная+футболка" data-img-white="https://via.placeholder.com/300x200/ffffff/000000?text=Белая+футболка">
+      <h3>Футболка Nike</h3>
+      <p class="price">990сом</p>
+      <div class="colors">
+        <span class="color-circle" style="background:red" onclick="changeColor(this, 'red')"></span>
+        <span class="color-circle" style="background:black" onclick="changeColor(this, 'black')"></span>
+        <span class="color-circle" style="background:white; border: 2px solid #ccc;" onclick="changeColor(this, 'white')"></span>
+      </div>
+    </div>
+	
+	<div class="product category-men size-m brand-nike">
+      <img src="ader.jpeg" alt="Футболка" data-img-red="https://via.placeholder.com/300x200/ff4c4c/ffffff?text=Красная+футболка" data-img-black="https://via.placeholder.com/300x200/000000/ffffff?text=Чёрная+футболка" data-img-white="https://via.placeholder.com/300x200/ffffff/000000?text=Белая+футболка">
+      <h3>Футболка Nike</h3>
+      <p class="price">990сом</p>
+      <div class="colors">
+        <span class="color-circle" style="background:red" onclick="changeColor(this, 'red')"></span>
+        <span class="color-circle" style="background:black" onclick="changeColor(this, 'black')"></span>
+        <span class="color-circle" style="background:white; border: 2px solid #ccc;" onclick="changeColor(this, 'white')"></span>
+      </div>
+    </div>
+	
+	<div class="product category-men size-m brand-nike">
+      <img src="ader.jpeg" alt="Футболка" data-img-red="https://via.placeholder.com/300x200/ff4c4c/ffffff?text=Красная+футболка" data-img-black="https://via.placeholder.com/300x200/000000/ffffff?text=Чёрная+футболка" data-img-white="https://via.placeholder.com/300x200/ffffff/000000?text=Белая+футболка">
+      <h3>Футболка Nike</h3>
+      <p class="price">990сом</p>
+      <div class="colors">
+        <span class="color-circle" style="background:red" onclick="changeColor(this, 'red')"></span>
+        <span class="color-circle" style="background:black" onclick="changeColor(this, 'black')"></span>
+        <span class="color-circle" style="background:white; border: 2px solid #ccc;" onclick="changeColor(this, 'white')"></span>
+      </div>
+    </div>
+	
+	<div class="product category-men size-m brand-nike">
+      <img src="ader.jpeg" alt="Футболка" data-img-red="https://via.placeholder.com/300x200/ff4c4c/ffffff?text=Красная+футболка" data-img-black="https://via.placeholder.com/300x200/000000/ffffff?text=Чёрная+футболка" data-img-white="https://via.placeholder.com/300x200/ffffff/000000?text=Белая+футболка">
+      <h3>Футболка Nike</h3>
+      <p class="price">990сом</p>
+      <div class="colors">
+        <span class="color-circle" style="background:red" onclick="changeColor(this, 'red')"></span>
+        <span class="color-circle" style="background:black" onclick="changeColor(this, 'black')"></span>
+        <span class="color-circle" style="background:white; border: 2px solid #ccc;" onclick="changeColor(this, 'white')"></span>
+      </div>
+    </div>
+	
+	<div class="product category-men size-m brand-nike">
+      <img src="ader.jpeg" alt="Футболка" data-img-red="https://via.placeholder.com/300x200/ff4c4c/ffffff?text=Красная+футболка" data-img-black="https://via.placeholder.com/300x200/000000/ffffff?text=Чёрная+футболка" data-img-white="https://via.placeholder.com/300x200/ffffff/000000?text=Белая+футболка">
+      <h3>Футболка Nike</h3>
+      <p class="price">990сом</p>
+      <div class="colors">
+        <span class="color-circle" style="background:red" onclick="changeColor(this, 'red')"></span>
+        <span class="color-circle" style="background:black" onclick="changeColor(this, 'black')"></span>
+        <span class="color-circle" style="background:white; border: 2px solid #ccc;" onclick="changeColor(this, 'white')"></span>
+      </div>
+    </div>
+	
+	<div class="product category-men size-m brand-nike">
+      <img src="ader.jpeg" alt="Футболка" data-img-red="https://via.placeholder.com/300x200/ff4c4c/ffffff?text=Красная+футболка" data-img-black="https://via.placeholder.com/300x200/000000/ffffff?text=Чёрная+футболка" data-img-white="https://via.placeholder.com/300x200/ffffff/000000?text=Белая+футболка">
+      <h3>Футболка Nike</h3>
+      <p class="price">990сом</p>
+      <div class="colors">
+        <span class="color-circle" style="background:red" onclick="changeColor(this, 'red')"></span>
+        <span class="color-circle" style="background:black" onclick="changeColor(this, 'black')"></span>
+        <span class="color-circle" style="background:white; border: 2px solid #ccc;" onclick="changeColor(this, 'white')"></span>
+      </div>
+    </div>
+	
+	<div class="product category-men size-m brand-nike">
+      <img src="ader.jpeg" alt="Футболка" data-img-red="https://via.placeholder.com/300x200/ff4c4c/ffffff?text=Красная+футболка" data-img-black="https://via.placeholder.com/300x200/000000/ffffff?text=Чёрная+футболка" data-img-white="https://via.placeholder.com/300x200/ffffff/000000?text=Белая+футболка">
+      <h3>Футболка Nike</h3>
+      <p class="price">990сом</p>
+      <div class="colors">
+        <span class="color-circle" style="background:red" onclick="changeColor(this, 'red')"></span>
+        <span class="color-circle" style="background:black" onclick="changeColor(this, 'black')"></span>
+        <span class="color-circle" style="background:white; border: 2px solid #ccc;" onclick="changeColor(this, 'white')"></span>
+      </div>
+    </div>
+	
+	<div class="product category-men size-m brand-nike">
+      <img src="ader.jpeg" alt="Футболка" data-img-red="https://via.placeholder.com/300x200/ff4c4c/ffffff?text=Красная+футболка" data-img-black="https://via.placeholder.com/300x200/000000/ffffff?text=Чёрная+футболка" data-img-white="https://via.placeholder.com/300x200/ffffff/000000?text=Белая+футболка">
+      <h3>Футболка Nike</h3>
+      <p class="price">990сом</p>
+      <div class="colors">
+        <span class="color-circle" style="background:red" onclick="changeColor(this, 'red')"></span>
+        <span class="color-circle" style="background:black" onclick="changeColor(this, 'black')"></span>
+        <span class="color-circle" style="background:white; border: 2px solid #ccc;" onclick="changeColor(this, 'white')"></span>
+      </div>
+    </div>
+	
+	<div class="product category-men size-m brand-nike">
+      <img src="ader.jpeg" alt="Футболка" data-img-red="https://via.placeholder.com/300x200/ff4c4c/ffffff?text=Красная+футболка" data-img-black="https://via.placeholder.com/300x200/000000/ffffff?text=Чёрная+футболка" data-img-white="https://via.placeholder.com/300x200/ffffff/000000?text=Белая+футболка">
+      <h3>Футболка Nike</h3>
+      <p class="price">990сом</p>
+      <div class="colors">
+        <span class="color-circle" style="background:red" onclick="changeColor(this, 'red')"></span>
+        <span class="color-circle" style="background:black" onclick="changeColor(this, 'black')"></span>
+        <span class="color-circle" style="background:white; border: 2px solid #ccc;" onclick="changeColor(this, 'white')"></span>
+      </div>
+    </div>
+	
+	<div class="product category-men size-m brand-nike">
+      <img src="ader.jpeg" alt="Футболка" data-img-red="https://via.placeholder.com/300x200/ff4c4c/ffffff?text=Красная+футболка" data-img-black="https://via.placeholder.com/300x200/000000/ffffff?text=Чёрная+футболка" data-img-white="https://via.placeholder.com/300x200/ffffff/000000?text=Белая+футболка">
+      <h3>Футболка Nike</h3>
+      <p class="price">990сом</p>
+      <div class="colors">
+        <span class="color-circle" style="background:red" onclick="changeColor(this, 'red')"></span>
+        <span class="color-circle" style="background:black" onclick="changeColor(this, 'black')"></span>
+        <span class="color-circle" style="background:white; border: 2px solid #ccc;" onclick="changeColor(this, 'white')"></span>
+      </div>
+    </div>
+	
+	<div class="product category-men size-m brand-nike">
+      <img src="ader.jpeg" alt="Футболка" data-img-red="https://via.placeholder.com/300x200/ff4c4c/ffffff?text=Красная+футболка" data-img-black="https://via.placeholder.com/300x200/000000/ffffff?text=Чёрная+футболка" data-img-white="https://via.placeholder.com/300x200/ffffff/000000?text=Белая+футболка">
+      <h3>Футболка Nike</h3>
+      <p class="price">990сом</p>
+      <div class="colors">
+        <span class="color-circle" style="background:red" onclick="changeColor(this, 'red')"></span>
+        <span class="color-circle" style="background:black" onclick="changeColor(this, 'black')"></span>
+        <span class="color-circle" style="background:white; border: 2px solid #ccc;" onclick="changeColor(this, 'white')"></span>
+      </div>
+    </div>
+	
+	
+	
+
+    <div class="product category-women size-s brand-hm hidden">
+      <img src=".jpeg" alt="Платье">
+      <h3>Платье H&M</h3>
+      <p class="price">1 590сом</p>
+      <div class="colors">
+        <span class="color-circle" style="background:pink"></span>
+        <span class="color-circle" style="background:violet"></span>
+      </div>
+    </div>
+
+
+    <div class="product category-kids size-l brand-adidas hidden">
+      <img src=".jpeg" alt="Куртка">
+      <h3>Куртка Adidas</h3>
+      <p class="price">2 150сом</p>
+      <div class="colors">
+        <span class="color-circle" style="background:yellow"></span>
+        <span class="color-circle" style="background:green"></span>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    function filterCategory(category) {
+      document.querySelectorAll('.tab-button').forEach(btn => btn.classList.remove('active'));
+      event.target.classList.add('active');
+
+      const allProducts = document.querySelectorAll('.product');
+      allProducts.forEach(p => p.classList.add('hidden'));
+      document.querySelectorAll('.product.category-' + category).forEach(p => p.classList.remove('hidden'));
+
+
+    }
+
+    function applyFilters() {
+      const size = document.getElementById('sizeFilter').value;
+      const brand = document.getElementById('brandFilter').value;
+      const visibleProducts = document.querySelectorAll('.product:not(.hidden)');
+
+      visibleProducts.forEach(product => {
+        const matchesSize = !size || product.classList.contains('size-' + size);
+        const matchesBrand = !brand || product.classList.contains('brand-' + brand);
+        product.style.display = (matchesSize && matchesBrand) ? 'block' : 'none';
+      });
+    }
+
+    function changeColor(elem, color) {
+      const product = elem.closest('.product');
+      const img = product.querySelector('img');
+      const newSrc = img.dataset[`img${capitalize(color)}`];
+      if (newSrc) img.src = newSrc;
+
+      // Визуальный выбор цвета
+      product.querySelectorAll('.color-circle').forEach(c => c.classList.remove('selected'));
+      elem.classList.add('selected');
+    }
+
+    function capitalize(str) {
+      
+    }
+  </script>
+
+</body>
+</html>
