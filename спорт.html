@@ -1,0 +1,640 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Спорт и отдых</title>
+  <style>
+    body {
+      font-family: sans-serif;
+      background-color:red;
+      padding: 20px;
+    }
+
+    h1 {
+      text-align: center;
+      color: white;
+      margin-bottom: 25px;
+    }
+
+    .tabs {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      justify-content: center;
+      margin-bottom: 20px;
+    }
+
+    .tabs button {
+      padding: 10px 15px;
+      border: none;
+      border-radius: 18px;
+      background-color: white;
+      color: black;
+      font-weight: bold;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+
+    .tabs button.active {
+      background-color: white;
+      color:black;
+    }
+
+    .section {
+      display: none;
+    }
+
+    .section.active {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(420px, 0fr));
+      gap: 30px;
+    }
+
+    .card {
+     background: white;
+      border-radius: 14px;
+      padding: 15px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+      transition: transform 0.2s;
+	  width: 250px;
+    }
+
+    .card img {
+      width: 100%;
+      border-radius: 10px;
+      height: 280px;
+      object-fit: cover;
+    }
+
+    .card h3 {
+      margin: 10px 0 5px;
+      color: black;
+      font-size: 16px;
+    }
+
+    .price {
+      color: black;
+      font-weight: bold;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Спорт и хобби</h1>
+
+  <div class="tabs">
+    <button class="tab-btn active" data-tab="sports"><a href="спорт и отдых.html">Спорт и отдых</a></button>
+    <button class="tab-btn" data-tab="bikes">Велосипеды</button>
+    <button class="tab-btn" data-tab="music">Музыкальные инструменты</button>
+    <button class="tab-btn" data-tab="hunt">Охота и рыбалка</button>
+    <button class="tab-btn" data-tab="yurts">Юрты</button>
+    <button class="tab-btn" data-tab="electro">Электротранспорт</button>
+    <button class="tab-btn" data-tab="winter">Зимний спорт</button>
+    <button class="tab-btn" data-tab="art">Искусство и коллекционирование</button>
+    <button class="tab-btn" data-tab="books">Книги и журналы</button>
+  </div>
+
+  <div class="section active" id="sports">
+    <div class="card">
+      <img src="Мяч.jpg" alt="Мяч">
+      <h3>Футбольный мяч</h3>
+      <p class="price">1 200сом</p>
+    </div>
+    <div class="card">
+      <img src="Турник.jpg" alt="Турник">
+      <h3>Домашний турник</h3>
+      <p class="price">3 500сом</p>
+    </div>
+	<div class="card">
+      <img src="Мяч басккетбольный.jpg" alt="Турник">
+      <h3>Мяч баскетбольный</h3>
+      <p class="price">3 500сом</p>
+    </div>
+	
+  </div>
+
+  <div class="section" id="bikes">
+    <div class="card">
+      <img src="Велосипед.jpg" alt="Велосипед">
+      <h3>Горный велосипед</h3>
+      <p class="price">18 990сом</p>
+    </div>
+	 <div class="card">
+      <img src="Велосипед2.jpeg" alt="Велосипед">
+      <h3>Спортивный велосипед</h3>
+      <p class="price">20 990сом</p>
+    </div>
+	 <div class="card">
+      <img src="Велосипед.jpeg" alt="Велосипед">
+      <h3>Велосипед</h3>
+      <p class="price">15 990сом</p>
+    </div>
+		 <div class="card">
+      <img src="Велосипед1.jpeg" alt="Велосипед">
+      <h3>Велосипед</h3>
+      <p class="price">14 990сом</p>
+    </div>
+		 <div class="card">
+      <img src="Велосипед5.jpeg" alt="Велосипед">
+      <h3>Велосипед</h3>
+      <p class="price">19 990сом</p>
+    </div>
+		 <div class="card">
+      <img src="Велосипед3.jpeg" alt="Велосипед">
+      <h3>Велосипед</h3>
+      <p class="price">18 990сом</p>
+    </div>
+		 <div class="card">
+      <img src="Велосипед4.jpeg" alt="Велосипед">
+      <h3>Велосипед</h3>
+      <p class="price">25 990сом</p>
+    </div>
+		 <div class="card">
+      <img src="Велосипед6.jpeg" alt="Велосипед">
+      <h3>Велосипед</h3>
+      <p class="price">17 990сом</p>
+    </div>
+		 <div class="card">
+      <img src="Велосипед7.jpeg" alt="Велосипед">
+      <h3>Велосипед</h3>
+      <p class="price">12 990сом</p>
+    </div>
+		 <div class="card">
+      <img src="Велосипед8.jpeg" alt="Велосипед">
+      <h3>Велосипед</h3>
+      <p class="price">16 990сом</p>
+    </div>
+		 <div class="card">
+      <img src="Велосипед9.jpeg" alt="Велосипед">
+      <h3>Велосипед</h3>
+      <p class="price">13 990сом</p>
+    </div>
+		 <div class="card">
+      <img src="Велосипед10.jpeg" alt="Велосипед">
+      <h3>Велосипед</h3>
+      <p class="price">11 990сом</p>
+    </div>
+  </div>
+  
+
+  <div class="section" id="music">
+    <div class="card">
+      <img src="Гитара.jpg" alt="Гитара">
+      <h3>Акустическая гитара</h3>
+      <p class="price">6 800сом</p>
+    </div>
+	 <div class="card">
+      <img src="Гитара.jpeg" alt="Гитара">
+      <h3>Акустическая гитара</h3>
+      <p class="price">10 800сом</p>
+    </div>
+	 <div class="card">
+      <img src="Гитара1.jpeg" alt="Гитара">
+      <h3>Акустическая гитара</h3>
+      <p class="price">16 800сом</p>
+    </div>
+	<div class="card">
+      <img src="скрипка.jpeg" alt="Гитара">
+      <h3>Скрипка</h3>
+      <p class="price">10 800сом</p>
+    </div>
+	<div class="card">
+      <img src="скрипка1.jpeg" alt="Гитара">
+      <h3>Скрипка</h3>
+      <p class="price">12 800сом</p>
+    </div>
+	<div class="card">
+      <img src="гормошка.jpeg" alt="Гитара">
+      <h3>Гормошка</h3>
+      <p class="price">16 800сом</p>
+    </div>
+	<div class="card">
+      <img src="пионино.jpeg" alt="Гитара">
+      <h3>Пионино</h3>
+      <p class="price">48 800сом</p>
+    </div>
+	<div class="card">
+      <img src="пионино1.jpeg" alt="Гитара">
+      <h3>Пионино</h3>
+      <p class="price">25 800сом</p>
+    </div>
+	<div class="card">
+      <img src="пионино2.jpeg" alt="Гитара">
+      <h3>Пионино</h3>
+      <p class="price">72 800сом</p>
+    </div>
+	<div class="card">
+      <img src="барабан.jpeg" alt="Гитара">
+      <h3>Барабан</h3>
+      <p class="price">18 800сом</p>
+    </div>
+	<div class="card">
+      <img src="барабан1.jpeg" alt="Гитара">
+      <h3>Барабан</h3>
+      <p class="price">22 800сом</p>
+    </div>
+	<div class="card">
+      <img src="барабан2.jpeg" alt="Гитара">
+      <h3>Барабан</h3>
+      <p class="price">17 800сом</p>
+    </div>
+  </div>
+
+  <div class="section" id="hunt">
+    <div class="card">
+      <img src="Удочка.jpg" alt="Удочка">
+      <h3>Удочка карповая</h3>
+      <p class="price">2 100сом</p>
+    </div>
+	 <div class="card">
+      <img src="Удочка.jpeg" alt="Удочка">
+      <h3>Удочка </h3>
+      <p class="price">1 100сом</p>
+    </div>
+	 <div class="card">
+      <img src="Удочка1.jpeg" alt="Удочка">
+      <h3>Удочка </h3>
+      <p class="price">2 900сом</p>
+    </div>
+	 <div class="card">
+      <img src="Удочка2.jpeg" alt="Удочка">
+      <h3>Удочка </h3>
+      <p class="price">3 100сом</p>
+    </div>
+	<div class="card">
+      <img src="винтовка.jpeg" alt="Удочка">
+      <h3>Винтовка</h3>
+      <p class="price">12 100сом</p>
+    </div>
+	<div class="card">
+      <img src="винтовка2.jpeg" alt="Удочка">
+      <h3>Винтовка</h3>
+      <p class="price">18 100сом</p>
+    </div>
+	<div class="card">
+      <img src="винтовка1.jpeg" alt="Удочка">
+      <h3>Винтовка</h3>
+      <p class="price">14 100сом</p>
+    </div>
+	<div class="card">
+      <img src="гарпун.jpeg" alt="Удочка">
+      <h3>Гарпун</h3>
+      <p class="price">9 100сом</p>
+    </div>
+	<div class="card">
+      <img src="арбалет.jpeg" alt="Удочка">
+      <h3>Арбалет</h3>
+      <p class="price">22 000сом</p>
+    </div>
+	<div class="card">
+      <img src="арбалет1.jpeg" alt="Удочка">
+      <h3>Арбалет</h3>
+      <p class="price">20 000сом</p>
+    </div>
+	<div class="card">
+      <img src="арбалет2.jpeg" alt="Удочка">
+      <h3>Арбалет</h3>
+      <p class="price">30 000сом</p>
+    </div>
+	<div class="card">
+      <img src="пистолет1.jpeg" alt="Удочка">
+      <h3>Пистолет</h3>
+      <p class="price">14 000сом</p>
+    </div>
+  </div>
+
+  <div class="section" id="yurts">
+    <div class="card">
+      <img src="юрта походная.jpg" alt="Юрта">
+      <h3>Кемпинговая юрта</h3>
+      <p class="price">59 000сом</p>
+    </div>
+	<div class="card">
+      <img src="юрта2.jpeg" alt="Юрта">
+      <h3>Юрта</h3>
+      <p class="price">39 000сом</p>
+    </div>
+	<div class="card">
+      <img src="юрта.jpeg" alt="Юрта">
+      <h3>Юрта</h3>
+      <p class="price">45 000сом</p>
+    </div>
+	<div class="card">
+      <img src="юрта4.jpeg" alt="Юрта">
+      <h3>Юрта</h3>
+      <p class="price">35 000сом</p>
+    </div>
+	<div class="card">
+      <img src="юрта12.jpeg" alt="Юрта">
+      <h3>Юрта</h3>
+      <p class="price">25 000сом</p>
+    </div>
+	<div class="card">
+      <img src="юрта5.jpeg" alt="Юрта">
+      <h3>Юрта</h3>
+      <p class="price">12 000сом</p>
+    </div>
+	<div class="card">
+      <img src="юрта6.jpeg" alt="Юрта">
+      <h3>Юрта</h3>
+      <p class="price">19 000сом</p>
+    </div>
+	<div class="card">
+      <img src="юрта7.jpeg" alt="Юрта">
+      <h3>Юрта</h3>
+      <p class="price">15 000сом</p>
+    </div>
+	<div class="card">
+      <img src="юрта8.jpeg" alt="Юрта">
+      <h3>Юрта</h3>
+      <p class="price">14 000сом</p>
+    </div>
+	<div class="card">
+      <img src="юрта9.jpeg" alt="Юрта">
+      <h3>Юрта</h3>
+      <p class="price">20 000сом</p>
+    </div>
+	<div class="card">
+      <img src="юрта10.jpeg" alt="Юрта">
+      <h3>Юрта</h3>
+      <p class="price">17 000сом</p>
+    </div>
+	<div class="card">
+      <img src="юрта11.jpeg" alt="Юрта">
+      <h3>Юрта</h3>
+      <p class="price">15 000сом</p>
+    </div>
+  </div>
+
+  <div class="section" id="electro">
+    <div class="card">
+      <img src="самокат.jpg" alt="Электросамокат">
+      <h3>Электросамокат Xiaomi</h3>
+      <p class="price">29 990сом</p>
+    </div>
+	<div class="card">
+      <img src="самокат9.jpeg" alt="Электросамокат">
+      <h3>Электросамокат</h3>
+      <p class="price">10 000сом</p>
+    </div>
+	<div class="card">
+      <img src="самокат1.jpeg" alt="Электросамокат">
+      <h3>Электросамокат</h3>
+      <p class="price">14 000сом</p>
+    </div>
+	<div class="card">
+      <img src="самокат2.jpeg" alt="Электросамокат">
+      <h3>Электросамокат</h3>
+      <p class="price">42 000сом</p>
+    </div>
+	<div class="card">
+      <img src="самокат3.jpeg" alt="Электросамокат">
+      <h3>Электросамокат</h3>
+      <p class="price">8 000сом</p>
+    </div>
+	<div class="card">
+      <img src="самокат4.jpeg" alt="Электросамокат">
+      <h3>Электросамокат</h3>
+      <p class="price">7 000сом</p>
+    </div>
+	<div class="card">
+      <img src="самокат5.jpeg" alt="Электросамокат">
+      <h3>Электросамокат</h3>
+      <p class="price">7 000сом</p>
+    </div>
+	<div class="card">
+      <img src="самокат6.jpeg" alt="Электросамокат">
+      <h3>Электросамокат</h3>
+      <p class="price">9 000сом</p>
+    </div>
+	<div class="card">
+      <img src="самокат7.jpeg" alt="Электросамокат">
+      <h3>Электросамокат</h3>
+      <p class="price">6 000сом</p>
+    </div> <div class="card">
+      <img src="самокат8.jpeg" alt="Электросамокат">
+      <h3>Электросамокат</h3>
+      <p class="price">14 000сом</p>
+    </div>
+	<div class="card">
+      <img src="гироскутер.jpeg" alt="Электросамокат">
+      <h3>Гироскутер</h3>
+      <p class="price">4 000сом</p>
+    </div>
+	<div class="card">
+      <img src="мопед.jpeg" alt="Электросамокат">
+      <h3>Электромопед</h3>
+      <p class="price">34 000сом</p>
+    </div>
+  </div>
+
+  <div class="section" id="winter">
+    <div class="card">
+      <img src="Сноуборд.jpg" alt="Сноуборд">
+      <h3>Сноуборд Burton</h3>
+      <p class="price">24 000сом</p>
+    </div>
+	<div class="card">
+      <img src="Сноуборд.jpeg" alt="Сноуборд">
+      <h3>Доска для сноуборда</h3>
+      <p class="price">14 000сом</p>
+    </div>
+	<div class="card">
+      <img src="Сноуборд1.jpeg" alt="Сноуборд">
+      <h3>Доска для сноуборда</h3>
+      <p class="price">20 000сом</p>
+    </div>
+	<div class="card">
+      <img src="Сноуборд2.jpeg" alt="Сноуборд">
+      <h3>Доска для сноуборда</h3>
+      <p class="price">21 000сом</p>
+    </div>
+	<div class="card">
+      <img src="Сноуборд3.jpeg" alt="Сноуборд">
+      <h3>Доска для сноуборда</h3>
+      <p class="price">22 000сом</p>
+    </div>
+	<div class="card">
+      <img src="коньки.jpeg" alt="Сноуборд">
+      <h3>Коньки</h3>
+      <p class="price">9 800сом</p>
+    </div>
+		<div class="card">
+      <img src="коньки1.jpeg" alt="Сноуборд">
+      <h3>Коньки</h3>
+      <p class="price">9 999сом</p>
+    </div>
+		<div class="card">
+      <img src="коньки2.jpeg" alt="Сноуборд">
+      <h3>Коньки</h3>
+      <p class="price">9 500сом</p>
+    </div>
+		<div class="card">
+      <img src="коньки3.jpeg" alt="Сноуборд">
+      <h3>Коньки</h3>
+      <p class="price">9 900сом</p>
+    </div>
+		<div class="card">
+      <img src="коньки4.jpeg" alt="Сноуборд">
+      <h3>Коньки</h3>
+      <p class="price">5 000сом</p>
+    </div>
+		<div class="card">
+      <img src="коньки5.jpeg" alt="Сноуборд">
+      <h3>Коньки</h3>
+      <p class="price">7 000сом</p>
+    </div>
+		
+	<div class="card">
+      <img src="лыжи.jpeg" alt="Сноуборд">
+      <h3>Лыжи</h3>
+      <p class="price">7 000сом</p>
+    </div>
+  </div>
+
+  <div class="section" id="art">
+    <div class="card">
+      <img src="Монета.jpg" alt="Монета">
+      <h3>Монета СССР 1961</h3>
+      <p class="price">1 500сом</p>
+    </div>
+	 <div class="card">
+      <img src="картинка2.jpeg" alt="Монета">
+      <h3>Мона Лиза</h3>
+      <p class="price">8 500сом</p>
+    </div> 
+	<div class="card">
+      <img src="картинка.jpeg" alt="Монета">
+      <h3>Картинка</h3>
+      <p class="price">900сом</p>
+    </div>
+	<div class="card">
+      <img src="картина1.jpeg" alt="Монета">
+      <h3>Картинка</h3>
+      <p class="price">500сом</p>
+    </div>
+	<div class="card">
+      <img src="картина3.jpeg" alt="Монета">
+      <h3>Картина</h3>
+      <p class="price">13 500сом</p>
+    </div>
+	<div class="card">
+      <img src="картина4.jpeg" alt="Монета">
+      <h3>Картина</h3>
+      <p class="price">3 999сом</p>
+    </div>
+	<div class="card">
+      <img src="картина5.jpeg" alt="Монета">
+      <h3>Картина</h3>
+      <p class="price">3 000сом</p>
+    </div>
+	<div class="card">
+      <img src="картина6.jpeg" alt="Монета">
+      <h3>Картина</h3>
+      <p class="price">3 900сом</p>
+    </div>
+	<div class="card">
+      <img src="картина7.jpeg" alt="Монета">
+      <h3>Картина</h3>
+      <p class="price">8 500сом</p>
+    </div>
+	<div class="card">
+      <img src="картина8.jpeg" alt="Монета">
+      <h3>Картина</h3>
+      <p class="price">5 500сом</p>
+    </div>
+	<div class="card">
+      <img src="картина9.jpeg" alt="Монета">
+      <h3>Картина</h3>
+      <p class="price">9 500сом</p>
+    </div>
+	<div class="card">
+      <img src="картина10.jpeg" alt="Монета">
+      <h3>Картина</h3>
+      <p class="price">13 500сом</p>
+    </div>
+	
+  </div>
+
+  <div class="section" id="books">
+    <div class="card">
+      <img src="Книга.jpg" alt="Книга">
+      <h3>Книга "Мастер и Маргарита"</h3>
+      <p class="price">490сом</p>
+    </div>
+	<div class="card">
+      <img src="Книга.jpeg" alt="Книга">
+      <h3>Книга "Тонкое искусство пофигизма"</h3>
+      <p class="price">790сом</p>
+    </div>
+	<div class="card">
+      <img src="Книга2.jpeg" alt="Книга">
+      <h3>Книга "Менталист"</h3>
+      <p class="price">390сом</p>
+    </div>
+	<div class="card">
+      <img src="Книга1.jpeg" alt="Книга">
+      <h3>Книга <h3>
+      <p class="price">500сом</p>
+    </div>
+	<div class="card">
+      <img src="Книга3.jpeg" alt="Книга">
+      <h3>Книга <h3>
+      <p class="price">499сом</p>
+    </div>
+	<div class="card">
+      <img src="Книга4.jpeg" alt="Книга">
+      <h3>Книга <h3>
+      <p class="price">599сом</p>
+    </div>
+	<div class="card">
+      <img src="Книга5.jpeg" alt="Книга">
+      <h3>Книга <h3>
+      <p class="price">150сом</p>
+    </div>
+	<div class="card">
+      <img src="Книга6.jpeg" alt="Книга">
+      <h3>Книга <h3>
+      <p class="price">675сом</p>
+    </div>
+	<div class="card">
+      <img src="Книга7.jpeg" alt="Книга">
+      <h3>Книга <h3>
+      <p class="price">576сом</p>
+    </div>
+    <div class="card">
+      <img src="Книга8.jpeg" alt="Книга">
+      <h3>Книга <h3>
+      <p class="price">579сом</p>
+    </div>
+	<div class="card">
+      <img src="Книга9.jpeg" alt="Книга">
+      <h3>Книга <h3>
+      <p class="price">754сом</p>
+    </div>
+	<div class="card">
+      <img src="Книга10.jpeg" alt="Книга">
+      <h3>Книга <h3>
+      <p class="price">957сом</p>
+    </div>
+  </div>
+
+  <script>
+    const tabButtons = document.querySelectorAll('.tab-btn');
+    const sections = document.querySelectorAll('.section');
+
+    tabButtons.forEach(button => {
+      button.addEventListener('click', () => {
+        tabButtons.forEach(btn => btn.classList.remove('active'));
+        sections.forEach(sec => sec.classList.remove('active'));
+
+        button.classList.add('active');
+        const target = button.getAttribute('data-tab');
+        document.getElementById(target).classList.add('active');
+      });
+    });
+  </script>
+
+</body>
+</html>

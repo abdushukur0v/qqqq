@@ -1,0 +1,643 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Техника и электроника</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      margin: 0;
+      background: red;
+      padding: 20px;
+    }
+    h1 {
+      text-align: center;
+      color: white;
+      margin-bottom: 20px;
+    }
+    .tabs {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 10px;
+      margin-bottom: 30px;
+    }
+    .tabs button {
+      padding: 10px 15px;
+      background: white;
+      border: none;
+      border-radius: 20px;
+      cursor: pointer;
+      font-weight: bold;
+      color: black;
+      font-size: 14px;
+    }
+    .tabs button.active {
+      background:black;
+      color: white;
+    }
+    .section {
+      display: none;
+    }
+    .section.active {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(420px, 0fr));
+      gap: 30px;
+    }
+    .card {
+      background: #fff;
+      border-radius: 14px;
+      box-shadow: 0 6px 12px rgba(0,0,0,0.06);
+      padding: 15px;
+      transition: transform 0.2s;
+	   width: 250px;
+    }
+    .card:hover {
+      transform: translateY(-4px);
+    }
+    .card img {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+      border-radius: 10px;
+    }
+    .card h3 {
+      font-size: 16px;
+      margin: 10px 0 5px;
+      color: black;
+    }
+    .price {
+      font-weight: bold;
+      color: black;
+      font-size: 15px;
+    }
+  </style>
+</head>
+<body>
+
+  <h1> Техника и электроника</h1>
+
+  <div class="tabs">
+    <button class="tab-btn active" data-tab="phones">Телефоны  и аксессуары</button>
+    <button class="tab-btn" data-tab="computers">Компьютеры, ноутбуки и планшеты</button>
+    <button class="tab-btn" data-tab="home">Бытовая техника</button>
+    <button class="tab-btn" data-tab="heating">Отопление</button>
+    <button class="tab-btn" data-tab="audio">Аудио и ТВ</button>
+    <button class="tab-btn" data-tab="games">Игры и приставки</button>
+    <button class="tab-btn" data-tab="cameras">Камеры</button>
+    <button class="tab-btn" data-tab="car">Автоэлектроника</button>
+    <button class="tab-btn" data-tab="smartwatches">Смарт-часы</button>
+    <button class="tab-btn" data-tab="tradein">Скупка</button>
+  </div>
+
+  <div class="section active" id="phones">
+    <div class="card">
+      <img src="айфон.jpg" alt="iPhone">
+      <h3>Смартфон iPhone 15</h3>
+      <p class="price">89 990сом</p>
+    </div>
+	
+	<div class="card">
+      <img src="айфон2.jpeg" alt="iPhone">
+      <h3>Смартфон iPhone 6</h3>
+      <p class="price">9 990сом</p>
+    </div>
+	<div class="card">
+      <img src="айфон1.jpeg" alt="iPhone">
+      <h3>Смартфон iPhone XS</h3>
+      <p class="price">19 990сом</p>
+    </div>
+    <div class="card">
+      <img src="Чехол.jpg" alt="Case">
+      <h3>Чехол силиконовый</h3>
+      <p class="price">690сом</p>
+    </div>
+	<div class="card">
+      <img src="редми10.jpeg" alt="">
+      <h3>Redmi note 10</h3>
+      <p class="price">сом</p>
+    </div>
+	<div class="card">
+      <img src="редми12.jpeg" alt="">
+      <h3>Redmi 12</h3>
+      <p class="price">сом</p>
+    </div>
+	<div class="card">
+      <img src="самсунг24.jpeg" alt="">
+      <h3>Samsung s 24 ultra</h3>
+      <p class="price">77 000сом</p>
+    </div>
+	<div class="card">
+      <img src="самсунг23.jpeg" alt="">
+      <h3>Samsung s 23 ultra</h3>
+      <p class="price">56 000сом</p>
+    </div>
+	<div class="card">
+      <img src="самсунг21.jpeg" alt="">
+      <h3>Samsung s 21</h3>
+      <p class="price">21 000сом</p>
+    </div>
+	<div class="card">
+      <img src="чехол24.jpeg" alt="">
+      <h3>Чехол </h3>
+      <p class="price">500сом</p>
+    </div>
+	<div class="card">
+      <img src="чехол21.jpeg" alt="">
+      <h3>Чехол </h3>
+      <p class="price">1 000сом</p>
+    </div>
+	<div class="card">
+      <img src="айфон16.jpeg" alt="iPhone">
+      <h3>Смартфон iPhone 16</h3>
+      <p class="price">109 990сом</p>
+    </div>
+  </div>
+
+  <div class="section" id="computers">
+    <div class="card">
+      <img src="ноутбук.jpeg" alt="Ноутбук">
+      <h3>Ноутбук ASUS Ryzen 7</h3>
+      <p class="price">56 000сом</p>
+    </div>
+	<div class="card">
+      <img src="ноутбук1.jpeg" alt="Ноутбук">
+      <h3>Ноутбук Hp</h3>
+      <p class="price">26 000сом</p>
+    </div>
+	<div class="card">
+      <img src="ноутбук4.jpeg" alt="Ноутбук">
+      <h3>Ноутбук Hp</h3>
+      <p class="price">23 000сом</p>
+    </div>
+	<div class="card">
+      <img src="ноутбук2.jpeg" alt="Ноутбук">
+      <h3>MacBook</h3>
+      <p class="price">50 000сом</p>
+    </div>
+	<div class="card">
+      <img src="ноутбук3.jpeg" alt="Ноутбук">
+      <h3>MacBook</h3>
+      <p class="price">47 000сом</p>
+    </div>
+    <div class="card">
+      <img src="планшет.jpg" alt="Планшет">
+      <h3>Планшет Samsung Tab</h3>
+      <p class="price">25 000сом</p>
+    </div>
+	 <div class="card">
+      <img src="планшет.jpeg" alt="Планшет">
+      <h3>Ipad</h3>
+      <p class="price">25 000сом</p>
+    </div>
+	 <div class="card">
+      <img src="планшет1.jpeg" alt="Планшет">
+      <h3>Планшет Poco</h3>
+      <p class="price">25 000сом</p>
+    </div>
+	<div class="card">
+      <img src="пк.jpeg" alt="Планшет">
+      <h3>Компьютер</h3>
+      <p class="price">65 000сом</p>
+    </div>
+	<div class="card">
+      <img src="пк1.jpeg" alt="Планшет">
+      <h3>Компьютер</h3>
+      <p class="price">55 000сом</p>
+    </div>
+	<div class="card">
+      <img src="пк2.jpeg" alt="Планшет">
+      <h3>Компьютер</h3>
+      <p class="price">60 000сом</p>
+    </div>
+	<div class="card">
+      <img src="пк3.jpeg" alt="Планшет">
+      <h3>Компьютер</h3>
+      <p class="price">75 000сом</p>
+    </div>
+  </div>
+
+  <div class="section" id="home">
+    <div class="card">
+      <img src="Пылесос.jpg" alt="Пылесос">
+      <h3>Пылесос Xiaomi Mi</h3>
+      <p class="price">8 990сом</p>
+    </div>
+	<div class="card">
+      <img src="Пылесос.jpeg" alt="Пылесос">
+      <h3>Пылесос </h3>
+      <p class="price">8 990сом</p>
+    </div>
+	<div class="card">
+      <img src="Пылесос1.jpeg" alt="Пылесос">
+      <h3>Пылесос </h3>
+      <p class="price">8 990сом</p>
+    </div>
+	<div class="card">
+      <img src="Пылесос2.jpeg" alt="Пылесос">
+      <h3>Пылесос </h3>
+      <p class="price">8 990сом</p>
+    </div>
+    <div class="card">
+      <img src="миксер.jpg" alt="Миксер">
+      <h3>Кухонный миксер Bosch</h3>
+      <p class="price">4 500сом</p>
+    </div>
+	<div class="card">
+      <img src="блендер.jpeg" alt="Миксер">
+      <h3>Кухонный блендер </h3>
+      <p class="price">2 500сом</p>
+    </div>
+	<div class="card">
+      <img src="блендер1.jpeg" alt="Миксер">
+      <h3>Кухонный блендер</h3>
+      <p class="price">4 900сом</p>
+    </div>
+	<div class="card">
+      <img src="блендер2.jpeg" alt="Миксер">
+      <h3>Кухонный блендер</h3>
+      <p class="price">3 500сом</p>
+    </div>
+	<div class="card">
+      <img src="стиралка.jpeg" alt="Миксер">
+      <h3>Стиральная машина</h3>
+      <p class="price">18 500сом</p>
+    </div>
+	<div class="card">
+      <img src="стиралка1.jpeg" alt="Миксер">
+      <h3>Стиральная машина</h3>
+      <p class="price">27 500сом</p>
+    </div>
+	<div class="card">
+      <img src="стиралка2.jpeg" alt="Миксер">
+      <h3>Стиральная машина</h3>
+      <p class="price">22 500сом</p>
+    </div>
+	<div class="card">
+      <img src="стиралка3.jpeg" alt="Миксер">
+      <h3>Стиральная машина</h3>
+      <p class="price">19 500сом</p>
+    </div>
+  </div>
+
+  <div class="section" id="heating">
+    <div class="card">
+      <img src="Обогреватель.jpg" alt="Обогреватель">
+      <h3>Масляный обогреватель</h3>
+      <p class="price">3 900сом</p>
+    </div>
+	 <div class="card">
+      <img src="Обогреватель.jpeg" alt="Обогреватель">
+      <h3>Масляный обогреватель</h3>
+      <p class="price">4 900сом</p>
+    </div>
+	 <div class="card">
+      <img src="Обогреватель1.jpeg" alt="Обогреватель">
+      <h3>Масляный обогреватель</h3>
+      <p class="price">2 900сом</p>
+    </div>
+	 <div class="card">
+      <img src="Обогреватель2.jpeg" alt="Обогреватель">
+      <h3>Масляный обогреватель</h3>
+      <p class="price">3 000сом</p>
+    </div>
+	<div class="card">
+      <img src="печка1.jpeg" alt="Обогреватель">
+      <h3>Печка</h3>
+      <p class="price">20 900сом</p>
+    </div>
+	<div class="card">
+      <img src="печка3.jpeg" alt="Обогреватель">
+      <h3>Печка</h3>
+      <p class="price">24 900сом</p>
+    </div>
+	<div class="card">
+      <img src="печка4.jpeg" alt="Обогреватель">
+      <h3>Печка</h3>
+      <p class="price">20 000сом</p>
+    </div>
+	<div class="card">
+      <img src="печка5.jpeg" alt="Обогреватель">
+      <h3>Печка</h3>
+      <p class="price">21 900сом</p>
+    </div>
+	<div class="card">
+      <img src="печка2.jpeg" alt="Обогреватель">
+      <h3>Обогреватель</h3>
+      <p class="price">30 900сом</p>
+    </div>
+	<div class="card">
+      <img src="печка6.jpeg" alt="Обогреватель">
+      <h3>Обогреватель</h3>
+      <p class="price">34 900сом</p>
+    </div>
+	<div class="card">
+      <img src="печка7.jpeg" alt="Обогреватель">
+      <h3>Обогреватель</h3>
+      <p class="price">32 900сом</p>
+    </div>
+	<div class="card">
+      <img src="печка8.jpeg" alt="Обогреватель">
+      <h3>Обогреватель</h3>
+      <p class="price">37 900сом</p>
+    </div>
+  </div>
+
+  <div class="section" id="audio">
+    <div class="card">
+      <img src="Колонка.jpg" alt="Колонка">
+      <h3>Bluetooth колонка JBL</h3>
+      <p class="price">2 500сом</p>
+    </div>
+	 <div class="card">
+      <img src="Колонка.jpeg" alt="Колонка">
+      <h3>Bluetooth колонка </h3>
+      <p class="price">12 500сом</p>
+    </div>
+	 <div class="card">
+      <img src="Колонка1.jpeg" alt="Колонка">
+      <h3>Bluetooth колонка </h3>
+      <p class="price">7 500сом</p>
+    </div>
+	 <div class="card">
+      <img src="Колонка2.jpeg" alt="Колонка">
+      <h3>Bluetooth колонка </h3>
+      <p class="price">10 500сом</p>
+    </div>
+    <div class="card">
+      <img src="телевизор.jpg" alt="TV">
+      <h3>Телевизор LG 4K 43"</h3>
+      <p class="price">32 000сом</p>
+    </div>
+	<div class="card">
+      <img src="телевизор.jpeg" alt="TV">
+      <h3>Телевизор</h3>
+      <p class="price">38 000сом</p>
+    </div>
+	<div class="card">
+      <img src="телевизор1.jpeg" alt="TV">
+      <h3>Телевизор</h3>
+      <p class="price">35 000сом</p>
+    </div>
+	<div class="card">
+      <img src="телевизор2.jpeg" alt="TV">
+      <h3>Телевизор </h3>
+      <p class="price">36 000сом</p>
+    </div>
+	<div class="card">
+      <img src="радио.jpeg" alt="TV">
+      <h3>Радио</h3>
+      <p class="price">3 000сом</p>
+    </div>
+	<div class="card">
+      <img src="радио1.jpeg" alt="TV">
+      <h3>Радио</h3>
+      <p class="price">4 000сом</p>
+    </div>
+	<div class="card">
+      <img src="радио2.jpeg" alt="TV">
+      <h3>Радио</h3>
+      <p class="price">2 000сом</p>
+    </div>
+	<div class="card">
+      <img src="радио3.jpeg" alt="TV">
+      <h3>Радио</h3>
+      <p class="price">2 500сом</p>
+    </div>
+  </div>
+
+  <div class="section" id="games">
+    <div class="card">
+      <img src="пс5.jpg" alt="PS5">
+      <h3>PlayStation 5</h3>
+      <p class="price">59 990сом</p>
+    </div>
+	<div class="card">
+      <img src="пс5.jpeg" alt="PS5">
+      <h3>PlayStation 5</h3>
+      <p class="price">58 990сом</p>
+    </div>
+	<div class="card">
+      <img src="пс55.jpeg" alt="PS5">
+      <h3>PlayStation 5</h3>
+      <p class="price">54 990сом</p>
+    </div>
+	 <div class="card">
+      <img src="пс2.jpeg" alt="PS4">
+      <h3>PlayStation 2</h3>
+      <p class="price">14 990сом</p>
+    </div>
+	 <div class="card">
+      <img src="пс22.jpeg" alt="PS4">
+      <h3>PlayStation 2</h3>
+      <p class="price">16 990сом</p>
+    </div>
+<div class="card">
+      <img src="приставка5.jpeg" alt="">
+      <h3>Приставка</h3>
+      <p class="price"> 1 090сом</p>
+    </div>
+    <div class="card">
+      <img src="приставка.jpeg" alt="">
+      <h3>Приставка</h3>
+      <p class="price"> 1 090сом</p>
+    </div>
+	<div class="card">
+      <img src="приставка1.jpeg" alt="">
+      <h3>Приставка</h3>
+      <p class="price">1 990сом</p>
+    </div>
+	<div class="card">
+      <img src="приставка2.jpeg" alt="">
+      <h3>Приставка</h3>
+      <p class="price">2 990сом</p>
+    </div>
+	<div class="card">
+      <img src="приставка3.jpeg" alt="">
+      <h3>Приставка</h3>
+      <p class="price">2 590сом</p>
+    </div>
+	<div class="card">
+      <img src="приставка4.jpeg" alt="">
+      <h3>Приставка</h3>
+      <p class="price">1 790сом</p>
+    </div>
+	
+	 <div class="card">
+      <img src="жестик.jpeg" alt="">
+      <h3>Джейстик</h3>
+      <p class="price"> 990сом</p>
+    </div>
+  </div>
+
+  <div class="section" id="cameras">
+    <div class="card">
+      <img src="фотоаппарат.jpg" alt="Камера">
+      <h3>Canon M50 Mark II</h3>
+      <p class="price">46 500сом</p>
+    </div>
+	<div class="card">
+      <img src="фотоаппарат.jpeg" alt="Камера">
+      <h3>Фотоаппарат</h3>
+      <p class="price">36 500сом</p>
+    </div>
+	<div class="card">
+      <img src="фотоаппарат1.jpeg" alt="Камера">
+      <h3>Фотоаппарат</h3>
+      <p class="price">39 500сом</p>
+    </div>
+	<div class="card">
+      <img src="фотоаппарат2.jpeg" alt="Камера">
+      <h3>Фотоаппарат</h3>
+      <p class="price">36 500сом</p>
+    </div>
+	<div class="card">
+      <img src="фотоаппарат3.jpeg" alt="Камера">
+      <h3>Фотоаппарат</h3>
+      <p class="price">38 500сом</p>
+    </div>
+	<div class="card">
+      <img src="фотоаппарат4.jpeg" alt="Камера">
+      <h3>Фотоаппарат</h3>
+      <p class="price">16 500сом</p>
+    </div>
+	<div class="card">
+      <img src="фотоаппарат5.jpeg" alt="Камера">
+      <h3>Фотоаппарат</h3>
+      <p class="price">36 900сом</p>
+    </div>
+	<div class="card">
+      <img src="фотоаппарат6.jpeg" alt="Камера">
+      <h3>Фотоаппарат</h3>
+      <p class="price">23 500сом</p>
+    </div>
+	<div class="card">
+      <img src="фотоаппарат7.jpeg" alt="Камера">
+      <h3>Фотоаппарат</h3>
+      <p class="price">28 500сом</p>
+    </div>
+	<div class="card">
+      <img src="фотоаппарат8.jpeg" alt="Камера">
+      <h3>Фотоаппарат</h3>
+      <p class="price">26 500сом</p>
+    </div>
+	<div class="card">
+      <img src="фотоаппарат9.jpeg" alt="Камера">
+      <h3>Фотоаппарат</h3>
+      <p class="price">33 500сом</p>
+    </div>
+	<div class="card">
+      <img src="фотоаппарат10.jpeg" alt="Камера">
+      <h3>Фотоаппарат</h3>
+      <p class="price">38 500сом</p>
+    </div>
+	
+  </div>
+
+  <div class="section" id="car">
+    <div class="card">
+      <img src="Видеорегистратор.jpg" alt="DVR">
+      <h3>Видеорегистратор Mio</h3>
+      <p class="price">4 200сом</p>
+    </div>
+	<div class="card">
+      <img src="колонка.jpeg" alt="DVR">
+      <h3>Колонка</h3>
+      <p class="price">1 000сом</p>
+    </div>
+	<div class="card">
+      <img src="аккумулятор.jpeg" alt="DVR">
+      <h3>Аккумулятор</h3>
+      <p class="price">3 200сом</p>
+    </div>
+  </div>
+
+  <div class="section" id="smartwatches">
+    <div class="card">
+      <img src="смарт часы.jpg" alt="Watch">
+      <h3>Смарт-часы Huawei</h3>
+      <p class="price">7 990сом</p>
+    </div>
+	<div class="card">
+      <img src="смартчасы4.jpeg" alt="Watch">
+      <h3>Смарт-часы </h3>
+      <p class="price">8 990сом</p>
+    </div>
+	<div class="card">
+      <img src="смартчасы3.jpeg" alt="Watch">
+      <h3>Смарт-часы </h3>
+      <p class="price">20 990сом</p>
+    </div>
+	<div class="card">
+      <img src="смартчасы5.jpeg" alt="Watch">
+      <h3>Смарт-часы </h3>
+      <p class="price">21 990сом</p>
+    </div>
+	<div class="card">
+      <img src="смартчасы6.jpeg" alt="Watch">
+      <h3>Смарт-часы </h3>
+      <p class="price">24 990сом</p>
+    </div>
+	<div class="card">
+      <img src="смартчасы7.jpeg" alt="Watch">
+      <h3>Смарт-часы </h3>
+      <p class="price">23 990сом</p>
+    </div>
+	<div class="card">
+      <img src="смартчасы8.jpeg" alt="Watch">
+      <h3>Смарт-часы </h3>
+      <p class="price">20 090сом</p>
+    </div>
+	<div class="card">
+      <img src="смартчасы9.jpeg" alt="Watch">
+      <h3>Смарт-часы </h3>
+      <p class="price">10 990сом</p>
+    </div>
+	<div class="card">
+      <img src="смартчасы10.jpeg" alt="Watch">
+      <h3>Смарт-часы </h3>
+      <p class="price">8 990сом</p>
+    </div>
+	<div class="card">
+      <img src="смартчасы11.jpeg" alt="Watch">
+      <h3>Смарт-часы </h3>
+      <p class="price">9 990сом</p>
+    </div>
+	<div class="card">
+      <img src="смартчасы12.jpeg" alt="Watch">
+      <h3>Смарт-часы </h3>
+      <p class="price">13 990сом</p>
+    </div>
+	<div class="card">
+      <img src="смартчасы13.jpeg" alt="Watch">
+      <h3>Смарт-часы </h3>
+      <p class="price">16 990сом</p>
+    </div>
+  </div>
+
+  <div class="section" id="tradein">
+    <div class="card">
+      <img src="Скупка.jpg" alt="Trade-in">
+      <h3>Примем вашу технику</h3>
+      <p class="price">Оценка при осмотре</p>
+    </div>
+  </div>
+
+  <script>
+    const tabs = document.querySelectorAll('.tab-btn');
+    const sections = document.querySelectorAll('.section');
+
+    tabs.forEach(btn => {
+      btn.addEventListener('click', () => {
+        tabs.forEach(b => b.classList.remove('active'));
+        sections.forEach(s => s.classList.remove('active'));
+
+        btn.classList.add('active');
+        document.getElementById(btn.dataset.tab).classList.add('active');
+      });
+    });
+  </script>
+
+</body>
+</html>

@@ -1,0 +1,968 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Спорт и отдых</title>
+  <style>
+    body {
+      font-family: sans-serif;
+      background-color: red;
+      padding: 20px;
+    }
+
+    h1 {
+      text-align: center;
+      color: white;
+      margin-bottom: 20px;
+    }
+
+    .tabs {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      justify-content: center;
+      margin-bottom: 20px;
+    }
+
+    .tabs button {
+      padding: 10px 14px;
+      background-color: white;
+      color: black;
+      border: none;
+      border-radius: 16px;
+      cursor: pointer;
+      transition: 0.3s;
+      font-weight: 600;
+    }
+
+    .tabs button.active {
+      background-color: black;
+      color: white;
+    }
+
+    .section {
+      display: none;
+    }
+
+    .section.active {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(420px, 0fr));
+      gap: 30px;
+    }
+
+    .card {
+      background: white;
+      border-radius: 14px;
+      padding: 15px;
+      text-align: center;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+	   width: 250px	;
+    }
+
+    .card img {
+      width: 100%;
+      height: 280px;
+      object-fit: cover;
+      border-radius: 10px;
+    }
+
+    .card h3 {
+      font-size: 16px;
+      margin: 10px 0 5px;
+      color: black;
+    }
+
+    .price {
+      font-weight: bold;
+      color:black;
+    }
+  </style>
+</head>
+<body>
+
+  <h1> Спорт и отдых</h1>
+
+  <div class="tabs">
+    <button class="tab-btn " data-tab="trenaz">Тренажёры</button>
+    <button class="tab-btn" data-tab="forma">Спортивная форма</button>
+    <button class="tab-btn" data-tab="pool">Бассейны</button>
+    <button class="tab-btn" data-tab="billiard">Бильярдные столы</button>
+    <button class="tab-btn" data-tab="binoc">Бинокли</button>
+    <button class="tab-btn" data-tab="box">Боксерские груши</button>
+    <button class="tab-btn" data-tab="boots">Бутсы</button>
+
+    <button class="tab-btn" data-tab="ball">Мячи</button>
+    <button class="tab-btn" data-tab="games">Настольные игры</button>
+    <button class="tab-btn" data-tab="nutrition">Спортпит</button>
+    <button class="tab-btn" data-tab="gloves">Перчатки</button>
+    <button class="tab-btn" data-tab="racket">Ракетки</button>
+
+    <button class="tab-btn" data-tab="backpacks">Рюкзаки</button>
+    <button class="tab-btn" data-tab="helmet">Шлемы</button>
+    <button class="tab-btn" data-tab="other">Другое</button>
+  </div>
+
+  <div id="trenaz" class="section active">
+    <div class="card">
+      <img src="Орбитрек.jpg" alt="Орбитрек">
+      <h3>Орбитрек</h3>
+      <p class="price">35 000сом</p>
+    </div>
+	 <div class="card">
+      <img src="Орбитрек.jpeg" alt="Орбитрек">
+      <h3>Орбитрек</h3>
+      <p class="price">25 000сом</p>
+    </div>
+	 <div class="card">
+      <img src="Орбитрек1.jpeg" alt="Орбитрек">
+      <h3>Орбитрек</h3>
+      <p class="price">30 000сом</p>
+    </div>
+	 <div class="card">
+      <img src="беговая.jpeg" alt="Орбитрек">
+      <h3>Беговая дорожка</h3>
+      <p class="price">45 000сом</p>
+    </div> 
+	 <div class="card">
+      <img src="беговая1.jpeg" alt="Орбитрек">
+      <h3>Беговая дорожка</h3>
+      <p class="price">38 000сом</p>
+    </div>
+	 <div class="card">
+      <img src="беговая2.jpeg" alt="Орбитрек">
+      <h3>Беговая дорожка</h3>
+      <p class="price">33 000сом</p>
+    </div>
+	 <div class="card">
+      <img src="беговая3.jpeg" alt="Орбитрек">
+      <h3>Беговая дорожка</h3>
+      <p class="price">47 000сом</p>
+    </div>
+	 <div class="card">
+      <img src="беговая4.jpeg" alt="Орбитрек">
+      <h3>Беговая дорожка</h3>
+      <p class="price">35 000сом</p>
+    </div>
+	<div class="card">
+      <img src="тренажер.jpeg" alt="Орбитрек">
+      <h3>Тренажер</h3>
+      <p class="price">25 000сом</p>
+    </div>
+  </div>
+
+  <div id="forma" class="section">
+    <div class="card">
+      <img src="адидас.jpg" alt="Форма">
+      <h3>Форма Adidas</h3>
+      <p class="price">4 500сом</p>
+    </div>
+	    <div class="card">
+      <img src="Форма8.jpeg" alt="Форма">
+      <h3>Спортивная Форма </h3>
+      <p class="price"> 500сом</p>
+    </div>
+	 <div class="card">
+      <img src="Форма.jpeg" alt="Форма">
+      <h3>Спортивная Форма </h3>
+      <p class="price"> 500сом</p>
+    </div>
+	 <div class="card">
+      <img src="Форма1.jpeg" alt="Форма">
+      <h3>Спортивная Форма </h3>
+      <p class="price"> 500сом</p>
+    </div>
+	 <div class="card">
+      <img src="Форма2.jpeg" alt="Форма">
+      <h3>Спортивная Форма </h3>
+      <p class="price"> 500сом</p>
+    </div>
+	 <div class="card">
+      <img src="Форма3.jpeg" alt="Форма">
+      <h3>Спортивная Форма </h3>
+      <p class="price"> 500сом</p>
+    </div>
+	 <div class="card">
+      <img src="Форма4.jpeg" alt="Форма">
+      <h3>Спортивная Форма </h3>
+      <p class="price"> 500сом</p>
+    </div>
+	 <div class="card">
+      <img src="Форма5.jpeg" alt="Форма">
+      <h3>Спортивная Форма </h3>
+      <p class="price"> 500сом</p>
+    </div>
+	 <div class="card">
+      <img src="Форма6.jpeg" alt="Форма">
+      <h3>Спортивная Форма </h3>
+      <p class="price"> 500сом</p>
+    </div>
+	 <div class="card">
+      <img src="Форма7.jpeg" alt="Форма">
+      <h3>Спортивная Форма </h3>
+      <p class="price"> 500сом</p>
+    </div>
+	 <div class="card">
+      <img src="футболка спортивная.jpeg" alt="Форма">
+      <h3>Футболка</h3>
+      <p class="price">1 500сом</p>
+    </div>
+	 <div class="card">
+      <img src="лосина.jpeg" alt="Форма">
+      <h3>Легинсы</h3>
+      <p class="price">2 500сом</p>
+    </div>
+  </div>
+
+  <div id="pool" class="section">
+    <div class="card">
+      <img src="Бассейн.jpg" alt="Бассейн">
+      <h3>Надувной бассейн</h3>
+      <p class="price">7 990сом</p>
+    </div>
+	 <div class="card">
+      <img src="Бассейн2.jpeg" alt="Бассейн">
+      <h3>Надувной бассейн</h3>
+      <p class="price">8 990сом</p>
+    </div>
+	 <div class="card">
+      <img src="Бассейн.jpeg" alt="Бассейн">
+      <h3>Надувной бассейн</h3>
+      <p class="price">12 990сом</p>
+    </div>
+	<div class="card">
+      <img src="Бассейн1.jpeg" alt="Бассейн">
+      <h3>Надувной бассейн</h3>
+      <p class="price">2 990сом</p>
+    </div>
+	<div class="card">
+      <img src="Бассейн3.jpeg" alt="Бассейн">
+      <h3>Надувной бассейн</h3>
+      <p class="price">7 990сом</p>
+    </div>
+	<div class="card">
+      <img src="Бассейн4.jpeg" alt="Бассейн">
+      <h3>Надувной бассейн</h3>
+      <p class="price">8 990сом</p>
+    </div>
+	<div class="card">
+      <img src="Бассейн5.jpeg" alt="Бассейн">
+      <h3>Надувной бассейн</h3>
+      <p class="price">5 990сом</p>
+    </div>
+	<div class="card">
+      <img src="Бассейн6.jpeg" alt="Бассейн">
+      <h3>Надувной бассейн</h3>
+      <p class="price">3 990сом</p>
+    </div>
+	<div class="card">
+      <img src="Бассейн7.jpeg" alt="Бассейн">
+      <h3>Надувной бассейн</h3>
+      <p class="price">7 990сом</p>
+    </div>
+	<div class="card">
+      <img src="Бассейн8.jpeg" alt="Бассейн">
+      <h3>Надувной бассейн</h3>
+      <p class="price">13 990сом</p>
+    </div>
+	<div class="card">
+      <img src="Бассейн9.jpeg" alt="Бассейн">
+      <h3>Надувной бассейн</h3>
+      <p class="price">15 990сом</p>
+    </div>
+	<div class="card">
+      <img src="Бассейн10.jpeg" alt="Бассейн">
+      <h3>Надувной бассейн</h3>
+      <p class="price">6 990сом</p>
+    </div>
+  </div>
+
+  <div id="billiard" class="section">
+    <div class="card">
+      <img src="Бильярд.jpg" alt="Бильярд">
+      <h3>Бильярдный стол</h3>
+      <p class="price">59 000сом</p>
+    </div>
+	<div class="card">
+      <img src="Бильярд2.jpeg" alt="Бильярд">
+      <h3>Бильярдный стол</h3>
+      <p class="price">79 000сом</p>
+    </div>
+	<div class="card">
+      <img src="Бильярд.jpeg" alt="Бильярд">
+      <h3>Бильярдный стол</h3>
+      <p class="price">50 000сом</p>
+    </div>
+	<div class="card">
+      <img src="Бильярд1.jpeg" alt="Бильярд">
+      <h3>Бильярдный стол</h3>
+      <p class="price">56 000сом</p>
+    </div>
+	<div class="card">
+      <img src="Бильярд3.jpeg" alt="Бильярд">
+      <h3>Бильярдный стол</h3>
+      <p class="price">45 000сом</p>
+    </div>
+	<div class="card">
+      <img src="Бильярд4.jpeg" alt="Бильярд">
+      <h3>Бильярдный стол</h3>
+      <p class="price">56 000сом</p>
+    </div>
+	<div class="card">
+      <img src="Бильярд5.jpeg" alt="Бильярд">
+      <h3>Бильярдный стол</h3>
+      <p class="price">47 000сом</p>
+    </div>
+	<div class="card">
+      <img src="Бильярд6.jpeg" alt="Бильярд">
+      <h3>Бильярдный стол</h3>
+      <p class="price">75 000сом</p>
+    </div>
+	<div class="card">
+      <img src="Бильярд7.jpeg" alt="Бильярд">
+      <h3>Бильярдный стол</h3>
+      <p class="price">35 000сом</p>
+    </div>
+	<div class="card">
+      <img src="Бильярд8.jpeg" alt="Бильярд">
+      <h3>Бильярдный стол</h3>
+      <p class="price">53 000сом</p>
+    </div>
+	<div class="card">
+      <img src="Бильярд9.jpeg" alt="Бильярд">
+      <h3>Бильярдный стол</h3>
+      <p class="price">55 000сом</p>
+    </div>
+	<div class="card">
+      <img src="Бильярд10.jpeg" alt="Бильярд">
+      <h3>Бильярдный стол</h3>
+      <p class="price">44ё 000сом</p>
+    </div>
+  </div>
+
+  <div id="binoc" class="section">
+    <div class="card">
+      <img src="Бинокль.jpg" alt="Бинокль">
+      <h3>Бинокль 10x50</h3>
+      <p class="price">3 000сом</p>
+    </div>
+	 <div class="card">
+      <img src="Бинокль2.jpeg" alt="Бинокль">
+      <h3>Бинокль </h3>
+      <p class="price">5 000сом</p>
+    </div>
+	 <div class="card">
+      <img src="Бинокль.jpeg" alt="Бинокль">
+      <h3>Бинокль </h3>
+      <p class="price">1 000сом</p>
+    </div>
+	 <div class="card">
+      <img src="Бинокль1.jpeg" alt="Бинокль">
+      <h3>Бинокль </h3>
+      <p class="price">2 000сом</p>
+    </div>
+	 <div class="card">
+      <img src="Бинокль3.jpeg" alt="Бинокль">
+      <h3>Бинокль </h3>
+      <p class="price">1 600сом</p>
+    </div>
+	 <div class="card">
+      <img src="Бинокль4.jpeg" alt="Бинокль">
+      <h3>Бинокль </h3>
+      <p class="price">1 900сом</p>
+    </div>
+	 <div class="card">
+      <img src="Бинокль5.jpeg" alt="Бинокль">
+      <h3>Бинокль </h3>
+      <p class="price">1 800сом</p>
+    </div>
+	 <div class="card">
+      <img src="Бинокль6.jpeg" alt="Бинокль">
+      <h3>Бинокль </h3>
+      <p class="price">1 300сом</p>
+    </div>
+	 <div class="card">
+      <img src="Бинокль7.jpeg" alt="Бинокль">
+      <h3>Бинокль </h3>
+      <p class="price">1 600сом</p>
+    </div>
+	 <div class="card">
+      <img src="Бинокль8.jpeg" alt="Бинокль">
+      <h3>Бинокль </h3>
+      <p class="price">1 700сом</p>
+    </div>
+	 <div class="card">
+      <img src="Бинокль9.jpeg" alt="Бинокль">
+      <h3>Бинокль </h3>
+      <p class="price">1 200сом</p>
+    </div>
+	 <div class="card">
+      <img src="Бинокль10.jpeg" alt="Бинокль">
+      <h3>Бинокль </h3>
+      <p class="price">3 000сом</p>
+    </div>
+  </div>
+
+  <div id="box" class="section">
+    <div class="card">
+      <img src="Груша бокса.jpg" alt="Груша">
+      <h3>Боксерская груша</h3>
+      <p class="price">2 600сом</p>
+    </div>
+	<div class="card">
+      <img src="мешок.jpeg" alt="Груша">
+      <h3>Боксерская груша</h3>
+      <p class="price">5 600сом</p>
+    </div>
+	<div class="card">
+      <img src="мешок2.jpeg" alt="Груша">
+      <h3>Боксерская груша</h3>
+      <p class="price">3 600сом</p>
+    </div>
+	<div class="card">
+      <img src="мешок1.jpeg" alt="Груша">
+      <h3>Боксерская груша</h3>
+      <p class="price">2 600сом</p>
+    </div>
+	<div class="card">
+      <img src="мешок3.jpeg" alt="Груша">
+      <h3>Боксерская груша</h3>
+      <p class="price">4 600сом</p>
+    </div>
+	<div class="card">
+      <img src="мешок4.jpeg" alt="Груша">
+      <h3>Боксерская груша</h3>
+      <p class="price">6 600сом</p>
+    </div>
+	<div class="card">
+      <img src="мешок5.jpeg" alt="Груша">
+      <h3>Боксерская груша</h3>
+      <p class="price">8 600сом</p>
+    </div>
+	<div class="card">
+      <img src="мешок6.jpeg" alt="Груша">
+      <h3>Боксерская груша</h3>
+      <p class="price">5 900сом</p>
+    </div>
+	<div class="card">
+      <img src="мешок7.jpeg" alt="Груша">
+      <h3>Боксерская груша</h3>
+      <p class="price">5 500сом</p>
+    </div>
+	<div class="card">
+      <img src="мешок8.jpeg" alt="Груша">
+      <h3>Боксерская груша</h3>
+      <p class="price">5 800сом</p>
+    </div>
+	<div class="card">
+      <img src="Груша бокса.jpeg" alt="Груша">
+      <h3>Боксерская груша</h3>
+      <p class="price">1 600сом</p>
+    </div>
+	<div class="card">
+      <img src="Груша бокса1.jpeg" alt="Груша">
+      <h3>Боксерская груша</h3>
+      <p class="price">2 600сом</p>
+    </div>
+  </div>
+
+  <div id="boots" class="section">
+    <div class="card">
+      <img src="Бутсы.jpg" alt="Бутсы">
+      <h3>Футбольные бутсы</h3>
+      <p class="price">3 900сом</p>
+    </div>
+	<div class="card">
+      <img src="Бутсы.jpeg" alt="Бутсы">
+      <h3>Футбольные бутсы</h3>
+      <p class="price">5 900сом</p>
+    </div>
+	<div class="card">
+      <img src="Бутсы2.jpeg" alt="Бутсы">
+      <h3>Футбольные бутсы</h3>
+      <p class="price">4 900сом</p>
+    </div>
+	<div class="card">
+      <img src="Бутсы1.jpeg" alt="Бутсы">
+      <h3>Футбольные бутсы</h3>
+      <p class="price"> 900сом</p>
+    </div>
+	<div class="card">
+      <img src="Бутсы3.jpeg" alt="Бутсы">
+      <h3>Футбольные бутсы</h3>
+      <p class="price"> 900сом</p>
+    </div>
+	<div class="card">
+      <img src="Бутсы4.jpeg" alt="Бутсы">
+      <h3>Футбольные бутсы</h3>
+      <p class="price"> 900сом</p>
+    </div>
+	<div class="card">
+      <img src="Бутсы5.jpeg" alt="Бутсы">
+      <h3>Футбольные бутсы</h3>
+      <p class="price"> 900сом</p>
+    </div>
+	<div class="card">
+      <img src="Бутсы6.jpeg" alt="Бутсы">
+      <h3>Футбольные бутсы</h3>
+      <p class="price"> 900сом</p>
+    </div>
+	<div class="card">
+      <img src="Бутсы7.jpeg" alt="Бутсы">
+      <h3>Футбольные бутсы</h3>
+      <p class="price"> 900сом</p>
+    </div>
+	<div class="card">
+      <img src="Бутсы8.jpeg" alt="Бутсы">
+      <h3>Футбольные бутсы</h3>
+      <p class="price"> 900сом</p>
+    </div>
+	<div class="card">
+      <img src="Бутсы9.jpeg" alt="Бутсы">
+      <h3>Футбольные бутсы</h3>
+      <p class="price"> 900сом</p>
+    </div>
+	<div class="card">
+      <img src="Бутсы10.jpeg" alt="Бутсы">
+      <h3>Футбольные бутсы</h3>
+      <p class="price"> 900сом</p>
+    </div>
+  </div>
+
+  
+
+  <div id="ball" class="section">
+    <div class="card">
+      <img src="Мяч.jpg" alt="Мяч">
+      <h3>Футбольный мяч</h3>
+      <p class="price">1 500сом</p>
+    </div>
+	<div class="card">
+      <img src="Футбольный мяч.jpeg" alt="Мяч">
+      <h3>Футбольный мяч</h3>
+      <p class="price">4 500сом</p>
+    </div>
+	<div class="card">
+      <img src="Футбольный мяч1.jpeg" alt="Мяч">
+      <h3>Футбольный мяч</h3>
+      <p class="price">3 500сом</p>
+    </div>
+	<div class="card">
+      <img src="Футбольный мяч2.jpeg" alt="Мяч">
+      <h3>Футбольный мяч</h3>
+      <p class="price">2 500сом</p>
+    </div>
+	<div class="card">
+      <img src="Баскетбольный мяч.jpeg" alt="Мяч">
+      <h3>Баскетбольный мяч</h3>
+      <p class="price">2 500сом</p>
+    </div>
+	<div class="card">
+      <img src="Мяч.jpeg" alt="Мяч">
+      <h3>Баскетбольный мяч</h3>
+      <p class="price">3 500сом</p>
+    </div>
+	<div class="card">
+      <img src="Баскетбольный мяч1.jpeg" alt="Мяч">
+      <h3>Баскетбольный мяч</h3>
+      <p class="price">3 500сом</p>
+    </div>
+	<div class="card">
+      <img src="Баскетбольный мяч2.jpeg" alt="Мяч">
+      <h3>Баскетбольный мяч</h3>
+      <p class="price">1 500сом</p>
+    </div>
+	<div class="card">
+      <img src="Мяч2.jpeg" alt="Мяч">
+      <h3>Воллейбольный мяч</h3>
+      <p class="price">3 646сом</p>
+    </div>
+	<div class="card">
+      <img src="Воллейбольный мяч.jpeg" alt="Мяч">
+      <h3>Воллейбольный мяч</h3>
+      <p class="price">1 200сом</p>
+    </div>
+	<div class="card">
+      <img src="Воллейбольный мяч1.jpeg" alt="Мяч">
+      <h3>Воллейбольный мяч</h3>
+      <p class="price">2 800сом</p>
+    </div>
+	<div class="card">
+      <img src="Воллейбольный мяч2.jpeg" alt="Мяч">
+      <h3>Воллейбольный мяч</h3>
+      <p class="price">1 800сом</p>
+    </div>
+  </div>
+
+  <div id="games" class="section">
+    <div class="card">
+      <img src="Монополия.jpg" alt="Игра">
+      <h3>Настольная игра "Монополия"</h3>
+      <p class="price">2 000сом</p>
+    </div>
+	<div class="card">
+      <img src="шашки.jpeg" alt="Игра">
+      <h3>Настольная игра "Шашки"</h3>
+      <p class="price"> 500сом</p>
+    </div>
+	<div class="card">
+      <img src="нарды.jpeg" alt="Игра">
+      <h3>Настольная игра "Нарды"</h3>
+      <p class="price">1 000сом</p>
+    </div>
+	<div class="card">
+      <img src="Настольная игра.jpeg" alt="Игра">
+      <h3>Настольная игра </h3>
+      <p class="price">1 500сом</p>
+    </div>
+	<div class="card">
+      <img src="Настольная игра1.jpeg" alt="Игра">
+      <h3>Настольная игра </h3>
+      <p class="price">1 900сом</p>
+    </div>
+	<div class="card">
+      <img src="Настольная игра2.jpeg" alt="Игра">
+      <h3>Настольная игра </h3>
+      <p class="price">1 300сом</p>
+    </div>
+	<div class="card">
+      <img src="Настольная игра3.jpeg" alt="Игра">
+      <h3>Настольная игра </h3>
+      <p class="price">1 700сом</p>
+    </div>
+	<div class="card">
+      <img src="Настольная игра4.jpeg" alt="Игра">
+      <h3>Настольная игра </h3>
+      <p class="price">1 100сом</p>
+    </div>
+	<div class="card">
+      <img src="Настольная игра5.jpeg" alt="Игра">
+      <h3>Настольная игра </h3>
+      <p class="price">700сом</p>
+    </div>
+	<div class="card">
+      <img src="Настольная игра6.jpeg" alt="Игра">
+      <h3>Настольная игра </h3>
+      <p class="price"> 900сом</p>
+    </div>
+	<div class="card">
+      <img src="Настольная игра7.jpeg" alt="Игра">
+      <h3>Настольная игра </h3>
+      <p class="price">2 000сом</p>
+    </div>
+	<div class="card">
+      <img src="Настольная игра8.jpeg" alt="Игра">
+      <h3>Настольная игра </h3>
+      <p class="price">11 000сом</p>
+    </div>
+  </div>
+
+  <div id="nutrition" class="section">
+    <div class="card">
+      <img src="Протеин.jpg" alt="Протеин">
+      <h3>Сывороточный протеин</h3>
+      <p class="price">2 900сом</p>
+    </div>
+	 <div class="card">
+      <img src="креатин.jpeg" alt="Протеин">
+      <h3>Сывороточный креатин</h3>
+      <p class="price">2 000сом</p>
+    </div>
+	 <div class="card">
+      <img src="гейнер.jpeg" alt="Протеин">
+      <h3>Гейнер</h3>
+      <p class="price">2 500сом</p>
+    </div>
+  </div>
+
+  <div id="gloves" class="section">
+    <div class="card">
+      <img src="Перчатки для бокса.jpg" alt="Перчатки">
+      <h3>Боксерские перчатки</h3>
+      <p class="price">2 400сом</p>
+    </div>
+	<div class="card">
+      <img src="Перчатки2.jpeg" alt="Перчатки">
+      <h3>Боксерские перчатки</h3>
+      <p class="price">1 400сом</p>
+    </div>
+	<div class="card">
+      <img src="Перчатки.jpeg" alt="Перчатки">
+      <h3>Боксерские перчатки</h3>
+      <p class="price"> 900сом</p>
+    </div>
+	<div class="card">
+      <img src="Перчатки11.jpeg" alt="Перчатки">
+      <h3>Боксерские перчатки</h3>
+      <p class="price">2 900сом</p>
+    </div>
+	<div class="card">
+      <img src="Перчатки3.jpeg" alt="Перчатки">
+      <h3>Боксерские перчатки</h3>
+      <p class="price">4 900сом</p>
+    </div>
+	<div class="card">
+      <img src="Перчатки4.jpeg" alt="Перчатки">
+      <h3>Боксерские перчатки</h3>
+      <p class="price">2 900сом</p>
+    </div>
+	<div class="card">
+      <img src="Перчатки5.jpeg" alt="Перчатки">
+      <h3>Боксерские перчатки</h3>
+      <p class="price">3 900сом</p>
+    </div>
+	<div class="card">
+      <img src="Перчатки6.jpeg" alt="Перчатки">
+      <h3>Боксерские перчатки</h3>
+      <p class="price">2 700сом</p>
+    </div>
+	<div class="card">
+      <img src="Перчатки7.jpeg" alt="Перчатки">
+      <h3>Боксерские перчатки</h3>
+      <p class="price">2 900сом</p>
+    </div>
+	<div class="card">
+      <img src="Перчатки8.jpeg" alt="Перчатки">
+      <h3>Боксерские перчатки</h3>
+      <p class="price">2 300сом</p>
+    </div>
+	<div class="card">
+      <img src="Перчатки9.jpeg" alt="Перчатки">
+      <h3>Боксерские перчатки</h3>
+      <p class="price">2 900сом</p>
+    </div>
+	<div class="card">
+      <img src="Перчатки10.jpeg" alt="Перчатки">
+      <h3>Боксерские перчатки</h3>
+      <p class="price">1 900сом</p>
+    </div>
+  </div>
+
+  <div id="racket" class="section">
+    <div class="card">
+      <img src="Ракетка.jpg" alt="Ракетка">
+      <h3>Теннисная ракетка</h3>
+      <p class="price">3 200сом</p>
+    </div>
+	<div class="card">
+      <img src="Ракетка.jpeg" alt="Ракетка">
+      <h3>Теннисная ракетка</h3>
+      <p class="price">2 200сом</p>
+    </div>
+	<div class="card">
+      <img src="Ракетка1.jpeg" alt="Ракетка">
+      <h3>Теннисная ракетка</h3>
+      <p class="price">2 900сом</p>
+    </div>
+	<div class="card">
+      <img src="Ракетка3.jpeg" alt="Ракетка">
+      <h3>Теннисная ракетка</h3>
+      <p class="price">3 200сом</p>
+    </div>
+	<div class="card">
+      <img src="Ракетка5.jpeg" alt="Ракетка">
+      <h3>Теннисная ракетка</h3>
+      <p class="price">1 200сом</p>
+    </div>
+	<div class="card">
+      <img src="Ракетка4.jpeg" alt="Ракетка">
+      <h3>Теннисная ракетка</h3>
+      <p class="price">2 700сом</p>
+    </div>
+	<div class="card">
+      <img src="Ракетка6.jpeg" alt="Ракетка">
+      <h3>Теннисная ракетка</h3>
+      <p class="price">2 500сом</p>
+    </div>
+	<div class="card">
+      <img src="Ракетка7.jpeg" alt="Ракетка">
+      <h3>Теннисная ракетка</h3>
+      <p class="price">2 200сом</p>
+    </div>
+	
+	<div class="card">
+      <img src="Ракетка2.jpeg" alt="Ракетка">
+      <h3>Ракетка</h3>
+      <p class="price">1 250сом</p>
+    </div>
+	<div class="card">
+      <img src="Ракетка8.jpeg" alt="Ракетка">
+      <h3>Ракетка</h3>
+      <p class="price"> 250сом</p>
+    </div>
+	<div class="card">
+      <img src="Ракетка9.jpeg" alt="Ракетка">
+      <h3>Ракетка</h3>
+      <p class="price">100сом</p>
+    </div>
+	<div class="card">
+      <img src="Ракетка10.jpeg" alt="Ракетка">
+      <h3>Ракетка</h3>
+      <p class="price"> 200сом</p>
+    </div>
+  </div>
+
+ 
+
+  <div id="backpacks" class="section">
+    <div class="card">
+      <img src="сумка1 .jpg" alt="Рюкзак">
+      <h3>Туристический рюкзак</h3>
+      <p class="price">4 200сом</p>
+    </div>
+	 <div class="card">
+      <img src="рюкзак2.jpeg" alt="Рюкзак">
+      <h3>Рюкзак</h3>
+      <p class="price">2 200сом</p>
+    </div>
+	 <div class="card">
+      <img src="рюкзак.jpeg" alt="Рюкзак">
+      <h3>Рюкзак</h3>
+      <p class="price">1 900сом</p>
+    </div>
+	<div class="card">
+      <img src="рюкзак1.jpeg" alt="Рюкзак">
+      <h3>Рюкзак</h3>
+      <p class="price">1 500сом</p>
+    </div>
+	<div class="card">
+      <img src="рюкзак3.jpeg" alt="Рюкзак">
+      <h3>Рюкзак</h3>
+      <p class="price">1 990сом</p>
+    </div>
+	<div class="card">
+      <img src="рюкзак4.jpeg" alt="Рюкзак">
+      <h3>Рюкзак</h3>
+      <p class="price">1 900сом</p>
+    </div>
+	<div class="card">
+      <img src="рюкзак5.jpeg" alt="Рюкзак">
+      <h3>Рюкзак</h3>
+      <p class="price">1 970сом</p>
+    </div>
+	<div class="card">
+      <img src="рюкзак6.jpeg" alt="Рюкзак">
+      <h3>Рюкзак</h3>
+      <p class="price">1 500сом</p>
+    </div>
+	<div class="card">
+      <img src="рюкзак7.jpeg" alt="Рюкзак">
+      <h3>Рюкзак</h3>
+      <p class="price">1 400сом</p>
+    </div>
+	<div class="card">
+      <img src="рюкзак8.jpeg" alt="Рюкзак">
+      <h3>Рюкзак</h3>
+      <p class="price">1 300сом</p>
+    </div>
+	<div class="card">
+      <img src="рюкзак9.jpeg" alt="Рюкзак">
+      <h3>Рюкзак</h3>
+      <p class="price">1 100сом</p>
+    </div>
+	<div class="card">
+      <img src="рюкзак10.jpeg" alt="Рюкзак">
+      <h3>Рюкзак</h3>
+      <p class="price">2 900сом</p>
+    </div>
+  </div>
+
+  <div id="helmet" class="section">
+    <div class="card">
+      <img src="велошлем.jpg" alt="Шлем">
+      <h3>Велошлем</h3>
+      <p class="price">1 800сом</p>
+    </div>
+	<div class="card">
+      <img src="шлем2.jpeg" alt="Шлем">
+      <h3л>Шлем</h3>
+      <p class="price">4 000сом</p>
+    </div>
+	<div class="card">
+      <img src="шлем.jpeg" alt="Шлем">
+      <h3>Шлем</h3>
+      <p class="price">3 800сом</p>
+    </div>
+	<div class="card">
+      <img src="шлем1.jpeg" alt="Шлем">
+      <h3>Шлем</h3>
+      <p class="price">3 990сом</p>
+    </div>
+	<div class="card">
+      <img src="шлем3.jpeg" alt="Шлем">
+      <h3>Шлем</h3>
+      <p class="price">3 900сом</p>
+    </div>
+	<div class="card">
+      <img src="шлем4.jpeg" alt="Шлем">
+      <h3>Шлем</h3>
+      <p class="price">300сом</p>
+    </div>
+	<div class="card">
+      <img src="шлем5.jpeg" alt="Шлем">
+      <h3>Шлем</h3>
+      <p class="price">1 900сом</p>
+    </div>
+	<div class="card">
+      <img src="шлем6.jpeg" alt="Шлем">
+      <h3>Шлем</h3>
+      <p class="price">2 900сом</p>
+    </div>
+	<div class="card">
+      <img src="шлем7.jpeg" alt="Шлем">
+      <h3>Шлем</h3>
+      <p class="price">3 400сом</p>
+    </div>
+	<div class="card">
+      <img src="шлем8.jpeg" alt="Шлем">
+      <h3>Шлем</h3>
+      <p class="price">3 300сом</p>
+    </div>
+	<div class="card">
+      <img src="шлем9.jpeg" alt="Шлем">
+      <h3>Шлем</h3>
+      <p class="price">3 500сом</p>
+    </div>
+	<div class="card">
+      <img src="шлем10.jpeg" alt="Шлем">
+      <h3>Шлем</h3>
+      <p class="price">4 900сом</p>
+    </div>
+  </div>
+
+  <div id="other" class="section">
+    <div class="card">
+      <img src="капа.jpg" alt="Прочее">
+      <h3>Аксессуары для спорта</h3>
+      <p class="price">по запросу</p>
+    </div>
+	<div class="card">
+      <img src="утяжелители.jpeg" alt="Прочее">
+      <h3>Утяжелители</h3>
+      <p class="price">по запросу</p>
+    </div>
+	<div class="card">
+      <img src="эспандер.jpeg" alt="Прочее">
+      <h3>Эспандер</h3>
+      <p class="price">по запросу</p>
+    </div>
+  </div>
+
+  <script>
+    const tabs = document.querySelectorAll(".tab-btn");
+    const sections = document.querySelectorAll(".section");
+
+    tabs.forEach(tab => {
+      tab.addEventListener("click", () => {
+        tabs.forEach(btn => btn.classList.remove("active"));
+        sections.forEach(sec => sec.classList.remove("active"));
+
+        tab.classList.add("active");
+        const target = tab.dataset.tab;
+        document.getElementById(target).classList.add("active");
+      });
+    });
+  </script>
+
+</body>
+</html>
