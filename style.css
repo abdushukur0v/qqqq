@@ -1,4 +1,4 @@
-.hot-deals {
+ .hot-deals {
   padding: 40px 20px;
   background: #fefefe;
 }
@@ -230,3 +230,111 @@
       color: red;
       text-decoration: none;
     }
+	 font-family: Arial, sans-serif;
+      background-color: #f3f4f6;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+	
+    .contact-card {
+      background-color: white;
+      padding: 2rem;
+      border-radius: 1rem;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+      text-align: center;
+      max-width: 400px;
+      width: 100%;
+    }
+    h1 {
+      margin-bottom: 1rem;
+    }
+    .contact-info {
+      margin: 1rem 0;
+      font-size: 1.2rem;
+    }
+    .contact-buttons a {
+      display: block;
+      margin: 0.5rem 0;
+      padding: 0.75rem;
+      border-radius: 0.5rem;
+      text-decoration: none;
+      color: white;
+      font-weight: bold;
+    }
+    .whatsapp {
+      background-color: #b0071a	;
+    }
+    .telegram {
+      background-color:#b0071a;
+    }
+#registerSection, #loginSection {
+  background-color: white;
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  width: 320px;
+}
+
+
+
+/* Стили форм */
+form {
+  display: flex;
+  flex-direction: column;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="password"] {
+  padding: 10px;
+  margin-bottom: 12px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 14px;
+  transition: border-color 0.3s;
+}
+
+input:focus {
+  border-color: #007bff;
+  outline: none;
+}
+
+button {
+  padding: 10px;
+  background-color:  #b0071a	;
+  border: none;
+  color: white;
+  font-size: 16px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+button:hover {
+  background-color:  #b0071a	;
+}
+
+.link {
+  display: block;
+  text-align: center;
+  margin-top: 15px;
+  color:  #b0071a	;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+.link:hover {
+  text-decoration: underline;
+}
+
+/* Сообщения */
+.message {
+  margin-top: 10px;
+  text-align: center;
+  font-size: 14px;
+  color: red;
+}
