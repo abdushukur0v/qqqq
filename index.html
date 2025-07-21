@@ -9,6 +9,9 @@
 </head>
 <body>
 
+ 
+
+
   <header>
     <div class="top-bar">
 <input type="text" id="searchInput" placeholder="Введите название товара..." />
@@ -39,10 +42,12 @@
     <div class="timer">Осталось:<div id="timer">Загрузка таймера...</div>
 </div><br/>
 	
-    <button><a href="распродажа.html">Смотреть товары</button></a>
-  </section>
+    <a href="распродажа.html"><button>Смотреть товары</button></a>
 
-   <div class="categories">
+  </section>
+  
+
+  <div class="categories">
     <div>📈<br><a href="топ продaж.html">Топ продаж</div></a>
     <div>👗<br><a href="одежда.html">Одежда</div></a>
     <div>👟<br> <a href="обувь.html">Обувь</div></a>
@@ -110,42 +115,18 @@
     
 
 
-    <section class="brands-section">
+  <section class="brands-section">
     <h3>Популярные бренды <a href="#" style="float:right;">Все бренды</a></h3>
     <div class="brands">
-      <div><a href="C:/Users/LEK/Desktop/Gucci.html">GUCCI</a></div>
-      <div><a href="file:///C:/Users/LEK/Desktop/%D1%81%D0%B0%D0%B9%D1%82/%D0%BB%D1%83%D0%B8%D1%81%20%D0%B2%D0%B8%D1%82%D0%BE%D0%BD.html#cart">LOUIS VUITTON</a></div>
-      <div><a href="file:///C:/Users/LEK/Desktop/%D1%81%D0%B0%D0%B9%D1%82/prada.html">PRADA</a></div>
-      <div><a href="file:///C:/Users/LEK/Desktop/%D1%81%D0%B0%D0%B9%D1%82/versace.html">VERSACE</a></div>
-      <div><a href="file:///C:/Users/LEK/Desktop/%D1%81%D0%B0%D0%B9%D1%82/chanel.html">CHANEL</a></div>
-      <div><a href="C:/Users/balenciaga.html">BALENCIAGA</a></div>
+      <div><a href="Gucci.html">GUCCI</a></div>
+      <div><a href="луис витон.html">LOUIS VUITTON</a></div>
+      <div><a href="prada.html">PRADA</a></div>
+      <div><a href="versace.html">VERSACE</a></div>
+      <div><a href="chanel.html">CHANEL</a></div>
+      <div><a href="balenciaga.html">BALENCIAGA</a></div>
     </div>
   </section>
-  <!-- Регистрация -->
-  <div id="registerSection">
-    <h2>Регистрация</h2>
-    <form id="registerForm">
-      <input type="text" id="regName" placeholder="Имя" required />
-      <input type="email" id="regEmail" placeholder="Email" required />
-      <input type="password" id="regPassword" placeholder="Пароль" required />
-      <input type="password" id="regConfirmPassword" placeholder="Повторите пароль" required />
-      <button type="submit">Зарегистрироваться</button>
-    </form>
-    <span class="link" id="showLogin">Уже есть аккаунт? Войти</span>
-    <div id="registerMessage" class="message"></div>
-  </div>
-
-  <!-- Вход -->
-  <div id="loginSection" style="display:none;">
-    <h2>Вход</h2>
-    <form id="loginForm">
-      <input type="email" id="loginEmail" placeholder="Email" required />
-      <input type="password" id="loginPassword" placeholder="Пароль" required />
-      <button type="submit">Войти</button>
-    </form>
-    <span class="link" id="showRegister">Нет аккаунта? Зарегистрироваться</span>
-    <div id="loginMessage" class="message"></div>
-  </div>
+ 
   <section class="features">
     <div class="feature">
       <div class="feature-icon">⏱</div>
@@ -173,7 +154,41 @@
 </form>
     </div>
 	
-  </section>
+	 <div class="contact-card">
+    <h1>Свяжитесь с нами</h1>
+    <div class="contact-info">
+      📞 Телефон: <strong>+996 555 50-61-03</strong>
+    </div>
+    <div class="contact-buttons">
+      <a href="https://wa.me/996555506103" class="whatsapp" target="_blank">Написать в WhatsApp</a>
+      <a href="https://t.me/abdushukur0v" class="telegram" target="_blank">Написать в Telegram</a>
+    </div>
+  </div>
+	 <!-- Регистрация -->
+  <div id="registerSection">
+    <h2>Регистрация</h2>
+    <form id="registerForm">
+      <input type="text" id="regName" placeholder="Имя" required />
+      <input type="email" id="regEmail" placeholder="Email" required />
+      <input type="password" id="regPassword" placeholder="Пароль" required />
+      <input type="password" id="regConfirmPassword" placeholder="Повторите пароль" required />
+      <button type="submit">Зарегистрироваться</button>
+    </form>
+    <span class="link" id="showLogin">Уже есть аккаунт? Войти</span>
+    <div id="registerMessage" class="message"></div>
+  </div>
+
+  <!-- Вход -->
+  <div id="loginSection" style="display:none;">
+    <h2>Вход</h2>
+    <form id="loginForm">
+      <input type="email" id="loginEmail" placeholder="Email" required />
+      <input type="password" id="loginPassword" placeholder="Пароль" required />
+      <button type="submit">Войти</button>
+    </form>
+    <span class="link" id="showRegister">Нет аккаунта? Зарегистрироваться</span>
+    <div id="loginMessage" class="message"></div>
+  </div>
   </section>
   
 
@@ -398,7 +413,7 @@ document.getElementById('loginForm').addEventListener('submit', function(e) {
     {
       title: "Плюшевый мишка",
       description: "мягкие игрушки для вашего ребенка",
-      url: ".html"
+      url: "file:///C:/Users/LEK/Desktop/%D1%81%D0%B0%D0%B9%D1%82/%D0%B4%D0%B5%D1%82%D1%8F%D0%BC.html"
     },
     {
       title: "Маникюрный набор 7 в 1",
@@ -454,3 +469,6 @@ document.getElementById('loginForm').addEventListener('submit', function(e) {
 	
   ];
 </script>
+
+</body>
+</html>
